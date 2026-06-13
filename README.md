@@ -66,6 +66,19 @@ relabeled rollout. Honesty about the boundary is part of the methodology.
 
 ---
 
+## No Claude Code? Start with the lite tools (no install)
+
+The skill is the full, rigorous version. If you just want to get your hands on the ideas, the
+[`tools/`](tools/) folder holds no-install, low-barrier tools, simplest first:
+
+- **[Self-test](tools/self-test.md)** — Are you AI-Native or AI-enabled? Which track? Pen and paper, ~2 min.
+- **[16-Bottleneck Scorecard](tools/bottleneck-scorecard.md)** — score your org 0–16, read the band.
+- **[T1 Canvas](tools/t1-canvas.md)** — your judgment distribution × context flow, on one page.
+- **[Portable Prompt](tools/portable-prompt.md)** — paste into any chatbot (ChatGPT, Claude, Gemini) for
+  an AI-assisted lite blueprint, no install.
+
+---
+
 ## Install
 
 ### As a Claude Code plugin (recommended)
@@ -111,6 +124,11 @@ skills/ai-native-architect/
 │   ├── workflow-graph.md             # the agent/human/policy node + annotation scaffold (YAML + Mermaid)
 │   └── architecture-blueprint.md     # the deliverable template
 └── evals/evals.json                  # test cases + assertions
+tools/                                # no-install lite tools, simplest first (start here without Claude Code)
+├── self-test.md                      # AI-Native or AI-enabled? which track? (pen + paper, ~2 min)
+├── bottleneck-scorecard.md           # the 16-bottleneck diagnostic, 0–16 (pen + paper)
+├── t1-canvas.md                      # judgment x context, on one page (fill-in)
+└── portable-prompt.md                # paste into any chatbot for a lite blueprint (no install)
 docs/
 ├── SYSTEM-DESIGN.md                  # how the canon, the skill, and this repo form one system
 └── VALIDATION.md                     # the multi-role council review track record
