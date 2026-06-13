@@ -1,0 +1,20 @@
+{
+  "name": "ai-native-architect",
+  "owner": {
+    "name": "Ji Li",
+    "url": "https://github.com/watterfall"
+  },
+  "metadata": {
+    "description": "Design a genuinely AI-Native organizational architecture from a business idea, startup wedge, new organization, or an incumbent's from-zero rebuild. The executable companion to the AI Native Organization Methodology.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ai-native-architect",
+      "source": "./",
+      "description": "Turns a business / startup / org-rebuild intent into a complete AI-Native Architecture Blueprint: a scope gate (greenfield / carve-out / out-of-scope AI-enablement / boundary), T1 (organization = distribution of judgment x flow of context), a redrawn workflow graph, the four-layer substrate, conditional depth modules, and the kernel/future-trajectory. Grounded in the AI Native Organization Methodology.",
+      "category": "productivity",
+      "tags": ["ai-native", "organization-design", "architecture", "strategy", "startup", "agents", "methodology"]
+    }
+  ]
+}

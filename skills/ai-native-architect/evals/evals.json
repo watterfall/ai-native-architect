@@ -1,0 +1,50 @@
+{
+  "skill_name": "ai-native-architect",
+  "pass_criterion": "On a random design case, a multi-role review panel (5 strict independent lenses) scores a mean overall of at least 8.5/10.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "greenfield-legal-tech-startup",
+      "prompt": "我想做一个面向中小企业的合同审查 SaaS 创业项目，团队现在就我和一个技术合伙人。客户上传合同，我们给出风险点和修改建议。我想从一开始就把它做成一个 AI 原生的公司，而不是先招一堆律师再让他们用 AI。帮我设计这个组织的架构应该长什么样。",
+      "expected_output": "Greenfield (Track A) blueprint.",
+      "files": [],
+      "assertions": [
+        "Classifies as Track A (greenfield).",
+        "States T1 for the org (judgment distribution × context flow).",
+        "Inverts the 16 bottlenecks into design rules rather than diagnosing a legacy org.",
+        "Includes at least one workflow graph (YAML + Mermaid) with agent/human/policy nodes, parallel fan-out, and at least one judgment anchor and one policy gate.",
+        "Specifies all four substrate layers (model/agent/context/observability).",
+        "Includes economics: cost, who-builds-and-maintains, and an ROI/payback trigger.",
+        "Reports the redraw-vs-graft self-test as No (genuine redraw)."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "incumbent-wants-transformation-gating",
+      "prompt": "We're a 600-person regional insurance company, founded in the 90s. The board wants an 'AI transformation' — roll out copilots to underwriting, claims, and customer service so everyone is faster, keep the current org structure. Can you design our AI-native architecture and a rollout plan across the departments?",
+      "expected_output": "Gates OUT as AI-enablement; honest redirect.",
+      "files": [],
+      "assertions": [
+        "Does NOT produce a fabricated full AI-Native blueprint for transforming the existing departments.",
+        "Names the request as AI-enablement, not AI-Native, a difference in kind.",
+        "States the org is not the target group of this methodology in unmodified form.",
+        "Offers both honest options: the adjacent change-management methodology for enablement, AND a from-zero Track B carve-out as the only AI-Native path.",
+        "Explains why grafting AI onto the existing graph won't move end-to-end throughput."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "solo-operator-content-business",
+      "prompt": "i'm a solo founder. i run a paid newsletter + a small course business about indie game marketing, ~2000 paying subs, ~$18k/mo. right now i'm the bottleneck — research, drafting, editing, customer support, everything is me and i'm drowning. i don't want to hire employees. how do i rebuild this as basically a one-person AI-native company so i'm only doing the parts that actually need me?",
+      "expected_output": "Track A / N=1 blueprint using the seven sovereign-operator pillars.",
+      "files": [],
+      "assertions": [
+        "Classifies as Track A (greenfield / N=1).",
+        "Identifies a small set of genuine human judgment anchors and pushes the rest to agents.",
+        "Checks the design against the seven sovereign-operator pillars.",
+        "Includes at least one workflow graph and a deliberately lightweight four-layer substrate (naming what is deferred).",
+        "Reports the redraw-vs-graft self-test as No."
+      ]
+    }
+  ]
+}

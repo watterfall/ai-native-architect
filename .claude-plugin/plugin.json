@@ -1,0 +1,23 @@
+{
+  "name": "ai-native-architect",
+  "version": "1.0.0",
+  "description": "Design a genuinely AI-Native organizational architecture from a business idea, startup wedge, new organization, new internal unit, or an incumbent's from-zero rebuild. The executable companion to the AI Native Organization Methodology (organization = distribution of judgment x flow of context).",
+  "author": {
+    "name": "Ji Li",
+    "url": "https://github.com/watterfall"
+  },
+  "homepage": "https://github.com/watterfall/ai-native-architect#readme",
+  "repository": "https://github.com/watterfall/ai-native-architect",
+  "license": "MIT",
+  "keywords": [
+    "ai-native",
+    "organization-design",
+    "architecture",
+    "operating-model",
+    "agents",
+    "strategy",
+    "startup",
+    "methodology"
+  ],
+  "skills": "./skills/"
+}
