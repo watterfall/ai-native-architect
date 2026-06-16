@@ -1,0 +1,27 @@
+{
+  "skill_name": "ai-native-learning",
+  "pass_criterion": "On a random learning case, a multi-role review panel (5 strict independent lenses) scores a mean overall of at least 8.5/10. The protocol must keep the desirable difficulty with the human, pin the agent to the verify seat, ship a reflection store with a self-answer field and a named write-back edge, and a dashboard that measures reproduction/transfer rather than throughput.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "greenfield-learn-rust-without-offloading",
+      "prompt": "我想用 AI 认真学会 Rust，目标是能不开教程独立写出并调试一个小型 CLI 工具。但我担心一直让 Claude 给我写代码、讲解，最后我自己其实什么都不会。帮我搭一套学习方法，让 AI 帮上忙又不会替我把该练的部分练掉。",
+      "expected_output": "A greenfield AI-Native Learning Protocol: capacity stated in knowing-how terms with its constitutive core vs. abundance-able shell; an offload-boundary derived from the two-dimension criterion with the desirable difficulty marked as the central kept-with-human node; a scaffold with the agent pinned to the verify seat and friction built into process; a reflection store with a self-answer field and next-review date; a dashboard tracking transfer/reproduction and challenge hit-rate; evidence graded B; a small first move.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "transformation-audit-already-hollowed",
+      "prompt": "I've been using ChatGPT for all my data-analysis work for about a year. I can read its pandas code and it looks right, but last week in an interview I had to write a groupby from scratch with no AI and completely blanked. I think I've quietly forgotten how to actually do this. How do I fix it and use AI in a way that doesn't keep eroding the skill?",
+      "expected_output": "A transformation-track protocol that runs the outsourcing audit FIRST (a removal drill identifying which constitutive steps got silently offloaded), then rebuilds the error-correction loop and desirable difficulty for those steps. Diagnoses the recognition-vs-reproduction trap explicitly, locates the scaffold/crutch break-point via removal test, and gives a dashboard whose transfer signal is performance with no AI present. Frames resistance as reordering (self-answer first / delayed help), not using AI less.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "out-of-scope-org-training-program",
+      "prompt": "我们公司 800 人，想做一套 AI 培训体系，给全体员工设计课程和考核，让大家都学会用 AI 提效。帮我设计这个企业培训和认证方案。",
+      "expected_output": "Gates OUT honestly: this is an org-scale training-system / curriculum / assessment-design request, which carries scale/equity/accountability constraints this surface does not model and cannot borrow individual-cognition conclusions for. Does NOT fabricate an org-scale program. Names the one seam (an org that wants people to return to meaning must keep members' judgment un-atrophied) and redirects org-scale design to the architect surface, while optionally offering the individual-cognition protocol for a single named capacity.",
+      "files": []
+    }
+  ]
+}

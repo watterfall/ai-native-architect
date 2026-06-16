@@ -1,0 +1,23 @@
+{
+  "skill_name": "ai-native-engineering",
+  "evals": [
+    {
+      "id": "webhook-ingest-service",
+      "prompt": "We get payment webhooks from a provider and right now a script just inserts them into our orders DB and sometimes marks an order refunded. It breaks a lot and we babysit it. I want to rebuild this the AI-native way with agents — can you build me the ingestion + refund handler properly?",
+      "expected_output": "Opens with the redraw-vs-graft test (deleting agents must not collapse to a human typing/reviewing every line) and scopes it as a brownfield noisy loop to instrument end-to-end. Delivers a real build, not advice: actual handler code/diff PLUS the five artifacts as files — SPEC.md (intent, non-goals, acceptance criteria, risk boundaries; placed on the spec ladder, ideally Spec-Anchored or Spec-as-Source), a runnable eval/verification suite with independent checks built into each node (not late QA), JUDGMENT.md, and PERMISSIONS.md. Correctly classifies the refund (money movement, irreversible) behind a human confirmation gate with a full verdict set {approve, reject, amend} and a named negative path, while plain ingestion/idempotent inserts are Delegate-tier gated by schema validation + tests. Honors the stop-line: an agent's classification of a webhook is never itself the sign-off on issuing a refund. PERMISSIONS.md is read-only-by-default with the DB write and refund call declared explicitly, least-privilege, with rollback. Names the failure modes it defends against (snowball, confident-wrongness) and ties each to a loop step. Closes with a Learn write-back (a new eval pinning the bug that caused the babysitting) and 1-2 lines of future-trajectory. Does NOT read as an org design.",
+      "files": []
+    },
+    {
+      "id": "spec-and-evals-for-parser",
+      "prompt": "I had Claude generate a CSV-to-JSON normalizer and it mostly works but I don't trust it. Write me a proper spec and an eval suite so I can keep regenerating it without fear.",
+      "expected_output": "Treats verification as the load-bearing wall. Writes SPEC.md with intent, non-goals, acceptance criteria written so they map to checks, and places it on the spec ladder explicitly (recommends Spec-as-Source given the user wants to regenerate). Builds an actual eval/verification suite: deterministic/independent checkers (schema validation, property tests on round-trips, fixed gold cases) whose criterion does not pass through the generating model, plus eval-decidable cases with a separately-manufactured rubric for the fuzzy ones. Explains the verifiability gradient and why 'independent' is the point — this is what lets the user regenerate and trust output without reading every line. Frames the eval suite as frozen judgment / a compounding asset (regressions blocked rises with run frequency at near-zero cost) and includes the Learn write-back habit (each new bug becomes a new eval). Right-sizes it (a parser likely does not need a heavy permissions manifest) and says so rather than over-engineering. Concrete files, not prose advice.",
+      "files": []
+    },
+    {
+      "id": "agent-permissions-and-judgment-map",
+      "prompt": "I'm giving a coding agent access to our infra tools — it can run kubectl, query prod Postgres, and open PRs. How do I let it actually do useful work without it nuking production? What needs my sign-off?",
+      "expected_output": "Produces PERMISSIONS.md (trust-boundary declaration) and JUDGMENT.md (judgment-node map) as the two concrete deliverables. PERMISSIONS.md is read-only-by-default: reads (kubectl get, SELECT, PR drafts) granted freely; every mutating action (kubectl apply/delete, writes, merges, deploys) declared explicitly, least-privilege (scoped namespaces/tables/repos, no ambient admin), with independent checks and rollback. JUDGMENT.md grades actions by reversibility x blast radius: low-radius reversible work fully Delegated to structure and never interrupts the human; irreversible x high-radius (prod deletes, schema migrations, prod deploys) behind explicit human confirmation gates with full verdict sets and named negative paths, including the adverse path (a wrongful auto-revert). Explicitly warns against the density trap — gating everything causes vigilance decay — so safety comes from the right few gates, not all gates. Holds the stop-line: the agent's risk classification is an input to the human's sign-off, never the sign-off itself. Notes the tool-attachment surface as the attack surface (tool poisoning / prompt injection / credential leakage). Reads as one engineer's reasoned boundary design, not a compliance checklist.",
+      "files": []
+    }
+  ]
+}

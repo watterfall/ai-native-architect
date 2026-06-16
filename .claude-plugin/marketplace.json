@@ -5,16 +5,16 @@
     "url": "https://github.com/watterfall"
   },
   "metadata": {
-    "description": "Design a genuinely AI-Native organizational architecture from a business idea, startup wedge, new organization, or an incumbent's from-zero rebuild. The executable companion to the AI Native Organization Methodology.",
-    "version": "1.0.0"
+    "description": "An AI-Native methodology system: an architecture-tier skill that designs an AI-Native organization, plus six execution-tier skills that do the work the AI-native way. The executable companion to the AI Native Organization Methodology.",
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "ai-native-architect",
       "source": "./",
-      "description": "Turns a business / startup / org-rebuild intent into a complete AI-Native Architecture Blueprint: a scope gate (greenfield / carve-out / out-of-scope AI-enablement / boundary), T1 (organization = distribution of judgment x flow of context), a redrawn workflow graph, the four-layer substrate, conditional depth modules, and the kernel/future-trajectory. Grounded in the AI Native Organization Methodology.",
+      "description": "A seven-skill AI-Native system over one shared kernel. ARCHITECTURE TIER: ai-native-architect turns a business / startup / org-rebuild intent into a complete AI-Native Architecture Blueprint (scope gate, T1 = distribution of judgment x flow of context, a redrawn workflow graph, the four-layer substrate, conditional depth modules, kernel + future-trajectory). EXECUTION TIER (six surfaces, one kernel): ai-native-engineering, ai-native-design, ai-native-research, ai-native-learning, ai-native-innovation, and ai-native-org each DO the work of their surface the AI-native way — agents execute the abundant, humans hold the few irreducible judgment nodes. Grounded in the AI Native Organization Methodology.",
       "category": "productivity",
-      "tags": ["ai-native", "organization-design", "architecture", "strategy", "startup", "agents", "methodology"]
+      "tags": ["ai-native", "organization-design", "architecture", "engineering", "design", "research", "learning", "innovation", "agents", "methodology"]
     }
   ]
 }

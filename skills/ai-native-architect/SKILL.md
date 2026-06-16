@@ -22,6 +22,15 @@ team, or unit in which **a network of agents does the execution, knowledge settl
 context system, and humans retreat to a few judgment nodes.** You are not adding AI to an org;
 you are redrawing the org around AI.
 
+**Where this sits in the system.** This skill is the **architecture / judgment tier** of a seven-skill
+system grounded in the "AI Native 组织方法论". It *designs* — it decides where judgment sits and how
+context flows, and emits a blueprint. The other six are the **execution tier** (`ai-native-engineering` ·
+`ai-native-design` · `ai-native-research` · `ai-native-learning` · `ai-native-innovation` ·
+`ai-native-org`): they *do* the work, the AI-native way, between and up to the judgment nodes this skill
+places — `ai-native-org` in particular *operates* the org this skill *designs*. When a blueprint is ready,
+name which execution skills run which loops; when an execution run reveals the architecture is wrong,
+surface it rather than routing around it. All seven share one spine in `references/_core/` — read it.
+
 The whole methodology compresses to one theorem (call it **T1**):
 
 > **组织 = 判断的分布 × 上下文的流动**
@@ -394,6 +403,11 @@ thing inline.
 ---
 
 ## References (read on demand)
+- `../../references/_core/` — **the shared spine of the whole system**, read by all seven skills:
+  `kernel.md` (the scarcity inversion, the four-step loop, the essence test) · `redraw-vs-graft.md`
+  (the gate) · `judgment-execution.md` (the judgment/execution split + stop-lines) · `canon-vocab.md`
+  (T1, the 16 bottlenecks, the four-layer substrate, M.01–06, the seven pillars) · `council.md` (the
+  5-role review gate). The architecture-tier references below go deeper on the *design* procedure.
 - `references/ai-native-kernel.md` — **the kernel/essence: why AI-Native is the future organizational
   form** (the scarcity inversion, the four shifts, the 0–5 essence test, build-to-ride-the-curves).
   **Read second, right after T1 — make it the spine of every design.**

@@ -1,0 +1,49 @@
+{
+  "skill_name": "ai-native-research",
+  "pass_criterion": "On a random research case, a multi-role review panel (5 strict independent lenses) scores a mean overall of at least 8.5/10.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "vet-batch-of-ai-generated-claims",
+      "prompt": "I had an agent generate ~40 candidate claims about whether intermittent fasting extends lifespan, pulled from across the literature. Some look solid, some look fringe, and a couple are wild. I don't have time to read every source. Which of these should I actually believe, and how do I hand back a defensible answer instead of just a vibe?",
+      "expected_output": "A Research Finding Dossier: the finding, a two-axis credibility ledger (Ⅰ–Ⅴ evidence grade kept separate from paradigm distance, claims unmixed from evidence), a knowledge-graph contribution, and a blind-spot register; the weak×far claims suspended for targeted evidence-seeking rather than deleted; the final credibility verdict reserved to the human.",
+      "files": [],
+      "assertions": [
+        "Produces a credibility ledger that grades evidence Ⅰ–Ⅴ and keeps claims unmixed from evidence (separate columns).",
+        "Uses two axes (evidence strength AND distance-from-paradigm), never a single collapsed credibility score.",
+        "Applies the four-quadrant disposition and explicitly SUSPENDS weak-evidence × far-from-paradigm claims for targeted evidence-seeking rather than deleting them.",
+        "Triages: hands the bulk traversal/scoring to agents but reserves the FINAL credibility verdict (vouch / vouch-with-caveats / withhold) to a named human.",
+        "Records a knowledge-graph contribution (nodes, evidence edges, any conflict edges) and a blind-spot register.",
+        "Does not collapse into 'read faster' — it redraws the loop around replication + the ledger as a load-bearing verifier."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "literature-synthesis-worth-knowing",
+      "prompt": "帮我做一个关于「大语言模型是否真的会推理，还是只是统计模式匹配」的文献综述。市面上观点很乱，我想要一个能站得住脚的结论，而不是把几十篇论文摘要拼在一起。",
+      "expected_output": "A Research Finding Dossier centered on integration (not retrieval): a synthesized finding with a credibility ledger that grades anchors Ⅰ–Ⅴ and caveats observational/model-predicted/self-reported claims, a knowledge-graph contribution with conflict edges where papers contradict, a blind-spot register, and the human-held worth-knowing + credibility verdicts.",
+      "files": [],
+      "assertions": [
+        "Distinguishes integration (the scarce act — stitching claims never before placed together) from retrieval (abundified), and treats the deliverable as a synthesis, not a stack of summaries.",
+        "Grades load-bearing citations Ⅰ–Ⅴ and labels register (observational ≠ causal, model-predicted, self-reported) rather than asserting them as fact.",
+        "Surfaces contradictions between sources as explicit conflict edges in the knowledge-graph contribution (the falsifiable property), not buried.",
+        "Reserves the final credibility verdict and the worth-knowing call to the human; states which truth is worth knowing for whom under which frame where relevant.",
+        "Includes a blind-spot register naming scope edges and what to re-check, plus a future-trajectory line."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "is-this-direction-worth-pursuing",
+      "prompt": "I'm an academic deciding what to work on next. An agent gave me 12 'high-impact' research directions in my subfield, all of which have datasets and benchmarks ready. They all feel safe and a bit boring. Help me figure out which of these is actually worth pursuing — or whether I'm being funneled into the safe in-paradigm zone.",
+      "expected_output": "A worth-knowing analysis: names the generation layer's conservative/homogenization bias and the funnel into the in-paradigm zone, separates community-mean taste (learnable, what the agent surfaced) from off-mean frontier value, keeps the worth-knowing call as the constitutive human node, and (since this borders direction/governance) flags the hand-off; produces a dossier framing rather than auto-picking a direction.",
+      "files": [],
+      "assertions": [
+        "Names that the candidate set is likely already narrowed by the generation layer's conservative bias (benchmarked, data-rich, in-paradigm) and that saved capacity does not auto-become exploration slack.",
+        "Distinguishes learnable community-mean taste from the off-mean frontier value, and treats 'worth knowing' as a constitutive judgment (worth for whom, under which value frame), not a capability/score.",
+        "Does NOT auto-select a single direction for the user; keeps the worth-knowing call as the reserved human judgment node and asks/frames the value question.",
+        "Requires the candidate set to include paradigm-level options rather than only the supplied in-paradigm twelve.",
+        "Flags the boundary/hand-off to direction-ownership (governance) and respects it instead of silently automating it."
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "ai-native-architect",
-  "version": "1.0.0",
-  "description": "Design a genuinely AI-Native organizational architecture from a business idea, startup wedge, new organization, new internal unit, or an incumbent's from-zero rebuild. The executable companion to the AI Native Organization Methodology (organization = distribution of judgment x flow of context).",
+  "version": "2.0.0",
+  "description": "An AI-Native methodology system, grounded in the AI Native Organization Methodology (organization = distribution of judgment x flow of context). One architecture/judgment-tier skill — ai-native-architect — designs an AI-Native organization; six execution-tier skills (engineering, design, research, learning, innovation, org) do the work the AI-native way: agents execute the abundant, humans hold the few judgment nodes. Six faces of one kernel.",
   "author": {
     "name": "Ji Li",
     "url": "https://github.com/watterfall"
@@ -15,8 +15,12 @@
     "architecture",
     "operating-model",
     "agents",
-    "strategy",
-    "startup",
+    "engineering",
+    "design",
+    "research",
+    "learning",
+    "innovation",
+    "execution-layer",
     "methodology"
   ],
   "skills": "./skills/"
