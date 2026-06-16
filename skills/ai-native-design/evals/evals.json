@@ -1,27 +1,48 @@
 {
   "skill_name": "ai-native-design",
-  "pass_criterion": "On a random design case, a multi-role review panel (5 strict independent lenses: kernel fidelity, design-domain craft, skeptic/collapse-to-enablement, operability, human boundary) scores a mean overall of at least 8.5/10 with no single lens below 8.0. The deliverable must be a real design artifact bundle (artifact + tokens-as-code + taste rationale + 指纹 check), produced via the spread→converge loop, with taste held by a human and judgment fed back into the system.",
+  "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For design cases, the design-specific lenses are kernel fidelity, design-domain craft, skeptic/collapse-to-enablement, operability, and human boundary. The deliverable must be a real design artifact bundle (artifact + tokens-as-code + taste rationale + 指纹 check), produced via the spread->converge loop, with taste held by a human and judgment fed back into the system.",
   "evals": [
     {
       "id": 1,
       "name": "greenfield-landing-page-distinctive",
       "prompt": "I'm launching a paid newsletter for indie ceramicists — practical kiln/glaze stuff, ~800 readers so far. I need a landing page that converts browsers to subscribers. Every SaaS template I try looks the same. Can you design the page for me? I'm not a designer but I can paste HTML/CSS into my site.",
       "expected_output": "A greenfield design bundle: a de-canvased, code-shaped landing page (HTML/CSS), a small token file, a taste rationale naming the directionally-diverse drafts and why one won, and a 指纹 check that names who it's distinctively for (indie ceramicists) and what slop fingerprints it avoids. The human (the user) holds the converge call; the skill does not auto-pick on the user's behalf without surfacing the trade-off.",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces the named design bundle with HTML/CSS, tokens, taste rationale, and fingerprint check, not general landing-page advice.",
+        "Names the human converge call as the scarce judgment stop-line and surfaces the trade-off before recommending a direction.",
+        "Designs against the negative path of generic SaaS-template drift and slop fingerprints.",
+        "Writes the selected direction back into retrievable tokens and rationale.",
+        "Does not drift into architect-tier org or company design."
+      ]
     },
     {
       "id": 2,
       "name": "restyle-make-it-less-ai-slop",
       "prompt": "我们这个 B2B 数据分析产品的首页现在特别 \"AI 味\"——青色配深底、紫蓝渐变标题、一堆等大卡片、每个标题上面一个大圆角图标，看起来跟所有 AI 创业公司一模一样。帮我重做一版，要看起来不那么同质化、像是专门为做供应链的人设计的。",
       "expected_output": "A restyle bundle that runs the fingerprint audit on the current page (names the specific slop tells present), then redraws via the spread→converge loop: code-shaped tokens replacing the teal/gradient/equal-card defaults, candidates down genuinely different directions, a taste rationale, and a distinctiveness claim grounded in the supply-chain audience (true for these people, with the accepted price of not being for everyone). Should resist 'polish harder' and instead move off the mean.",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces a concrete restyle bundle with audit findings, candidate directions, tokens, and rationale rather than advice.",
+        "Names the human taste/converge decision as the stop-line.",
+        "Covers the adverse path where polishing generic AI tells leaves the product indistinguishable.",
+        "Grounds the retrievable token changes in the supply-chain audience and accepted trade-offs.",
+        "Does not drift into architect-tier transformation or org design."
+      ]
     },
     {
       "id": 3,
       "name": "design-system-plus-multidraft-pick",
       "prompt": "we're a 4-person team building a habit-tracking app. design is all over the place — every screen looks like a different app. i want a small design system (tokens + a few core components) AND i want you to spread a few real options for the main 'today' screen and help me actually decide which one to ship. i'll make the final call but i want the reasoning laid out.",
       "expected_output": "A design-system-first bundle: tokens-as-code + a few component specs (the two-layer guardrail), THEN a candidate spread for the 'today' screen down directionally-diverse roads, each scored on the taste scorecard, with a steer/converge structure that lays out the reasoning and explicitly leaves the ship decision to the human while naming the recommended option and why. Judgment is distilled back into the system (a new token/red line). Demonstrates that two different screens/briefs would yield different artifacts, not a template.",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces tokens-as-code, component specs, and a scored multidraft screen spread as the named work product.",
+        "Leaves the final ship decision to the human while naming the recommended option and trade-offs.",
+        "Covers the negative path of inconsistent screens and template-like convergence.",
+        "Writes the chosen judgment back into a retrievable token or red-line artifact.",
+        "Does not drift into architect-tier product or org strategy."
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "skill_name": "ai-native-research",
-  "pass_criterion": "On a random research case, a multi-role review panel (5 strict independent lenses) scores a mean overall of at least 8.5/10.",
+  "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For research cases, the output must produce a Research Finding Dossier, keep claims separate from evidence, preserve the human credibility or worth-knowing verdict, and write the ledger/graph/blind-spot context back for future retrieval.",
   "evals": [
     {
       "id": 1,
@@ -14,6 +14,7 @@
         "Applies the four-quadrant disposition and explicitly SUSPENDS weak-evidence × far-from-paradigm claims for targeted evidence-seeking rather than deleting them.",
         "Triages: hands the bulk traversal/scoring to agents but reserves the FINAL credibility verdict (vouch / vouch-with-caveats / withhold) to a named human.",
         "Records a knowledge-graph contribution (nodes, evidence edges, any conflict edges) and a blind-spot register.",
+        "Treats the dossier, ledger, graph, and register as the retrievable work product rather than advice.",
         "Does not collapse into 'read faster' — it redraws the loop around replication + the ledger as a load-bearing verifier."
       ]
     },
@@ -28,6 +29,7 @@
         "Grades load-bearing citations Ⅰ–Ⅴ and labels register (observational ≠ causal, model-predicted, self-reported) rather than asserting them as fact.",
         "Surfaces contradictions between sources as explicit conflict edges in the knowledge-graph contribution (the falsifiable property), not buried.",
         "Reserves the final credibility verdict and the worth-knowing call to the human; states which truth is worth knowing for whom under which frame where relevant.",
+        "Treats weak or conflicting evidence as an adverse path to preserve and investigate, not smooth over.",
         "Includes a blind-spot register naming scope edges and what to re-check, plus a future-trajectory line."
       ]
     },
@@ -42,6 +44,7 @@
         "Distinguishes learnable community-mean taste from the off-mean frontier value, and treats 'worth knowing' as a constitutive judgment (worth for whom, under which value frame), not a capability/score.",
         "Does NOT auto-select a single direction for the user; keeps the worth-knowing call as the reserved human judgment node and asks/frames the value question.",
         "Requires the candidate set to include paradigm-level options rather than only the supplied in-paradigm twelve.",
+        "Writes the dossier framing and boundary hand-off as retrievable context for future direction review.",
         "Flags the boundary/hand-off to direction-ownership (governance) and respects it instead of silently automating it."
       ]
     }

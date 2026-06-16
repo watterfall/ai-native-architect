@@ -1,23 +1,45 @@
 {
   "skill_name": "ai-native-innovation",
+  "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For innovation cases, the output must run recognition and falsification before polish, make the value-perception or bet decision the human stop-line, produce an Innovation Portfolio or Bet Sheet, and feed bet retrospectives back into the system without drifting into org architecture.",
   "evals": [
     {
       "id": "drowning-in-ai-ideas",
       "prompt": "My 4-person team used AI to generate about 30 product directions for our note-taking app over two weeks. Every one of them has a polished one-pager and they all look feasible. We can't decide what to actually build. Help us figure out what's worth betting on.",
       "expected_output": "Runs the compass, not more generation. Names the core inversion: with 30 plausible directions, the scarce act is value-perception (which signal is real), not having more ideas — the noise floor rose, signal did not. Treats the 30 as the cheap, already-done half. Runs falsification BEFORE polish (INSTRUMENT 12) to puncture looks-feasible directions, then a three-axis value-perception reading (INSTRUMENT 06: real need from a lived patch / viable path — flagging where AI inflated it / inner conviction not borrowed) on survivors, then a bet allocation (INSTRUMENT 08: affordable loss × reversibility × who-bears-the-cost) backing only a few sharp bets. Keeps the bet as the human judgment node and does not let the model pick the winner. Produces an Innovation Portfolio & Bet Sheet written to a file (candidate log, falsification log, three-axis readings, bet sheet with who-pays readings, bet-retrospective). 'Generate many, bet few and sharp.'",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces an Innovation Portfolio and Bet Sheet rather than more ideation advice.",
+        "Names the bet allocation as the scarce human judgment stop-line.",
+        "Designs the negative path by falsifying plausible directions before polish.",
+        "Writes candidate logs, readings, and retrospectives into a retrievable artifact.",
+        "Does not drift to architect-tier org or operating model design."
+      ]
     },
     {
       "id": "innovation-pipeline-process",
       "prompt": "We're a 20-person startup and our CEO wants to set up an 'AI-powered innovation pipeline' — he's thinking hackathons every quarter, an idea board where everyone submits AI-generated concepts, and a KPI of number of pilots launched. Can you help design how we'd actually run innovation this way?",
       "expected_output": "Opens with the redraw-vs-graft gate and warns that hackathons + idea-board + pilots-launched KPI is the twentieth-century idea-scarcity machine, now pouring AI into the generation side and raising the noise floor — i.e. innovation theatre (the test: how many bets actually staked an affordable loss and went to verify a real need?). Explains the legacy structures' gates stand empty once the bottleneck moves to recognition. Redirects from idea-count metrics to a recognition discipline: abundant agent generation + falsification + a three-axis value-perception read + an affordable-loss bet allocation with who-pays attribution, plus a metrics-exempt useless-tree reserve (INSTRUMENT 07) and an emergence dashboard (recognition latency + amplification hit rate). Concentrates the human at the bet (value-perception stop-line), feeds a bet-retrospective so judgment self-calibrates. Delivers the pipeline as a runnable loop + portfolio template written to a file, NOT a design of an innovation org (that would be ai-native-architect).",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces a runnable innovation loop and portfolio template, not a hackathon playbook or advice.",
+        "Names value-perception and bet allocation as the human stop-line.",
+        "Covers the adverse path where idea-count KPIs create innovation theatre.",
+        "Writes context back through bet retrospectives and an emergence dashboard.",
+        "Does not drift to ai-native-architect or design a full innovation org."
+      ]
     },
     {
       "id": "is-this-direction-worth-it",
       "prompt": "I'm a solo founder. I have deep experience in commercial property management and I'm considering building an AI assistant that automates tenant dispute resolution and can issue eviction recommendations. ChatGPT and Claude both told me it's a great idea with a clear market. Is this worth betting on?",
       "expected_output": "Reads the direction on the three value axes and surfaces two specific dangers. (1) Borrowed conviction: 'both AIs said it's great' is the most dangerous false signal — runs the test 'if the AI reversed itself tomorrow, would your conviction shake?' and grounds real conviction in the founder's lived property-management patch (effectuation's bird-in-hand), not the model's endorsement. (2) Scope/consequence: eviction recommendations are an irreversible harm landing on innocent third parties (tenants), so affordable-loss's precondition fails — this is NOT a free-divergence 'bet fast, undo if wrong' scenario; it wants safety-engineering caution, and INSTRUMENT 08's consequence-attribution axis forces 'who bears the cost' onto the same row as 'who defines value.' Distinguishes pricing/insuring the consequence from the separate judgment of whether the harm should be created at all. Does NOT just validate the idea; gates honestly and, where it proceeds, falsifies before polish and names the bet as the founder's owned judgment.",
-      "files": []
+      "files": [],
+      "assertions": [
+        "Produces a three-axis worth-betting read and gate verdict rather than validation advice.",
+        "Names the founder's bet decision as the human judgment stop-line.",
+        "Designs the adverse path around borrowed conviction and eviction harm to third parties.",
+        "Writes the falsification and consequence-attribution context into a retrievable bet artifact.",
+        "Does not drift to architect-tier company or product operating design."
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "skill_name": "ai-native-architect",
-  "pass_criterion": "On a random design case, a multi-role review panel (5 strict independent lenses) scores a mean overall of at least 8.5/10.",
+  "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For architect cases, the blueprint must classify the track or gate-out honestly, redraw judgment distribution and context flow, include workflow/substrate/economics, and reject enablement grafts that are not AI-Native architecture.",
   "evals": [
     {
       "id": 1,
@@ -14,6 +14,7 @@
         "Inverts the 16 bottlenecks into design rules rather than diagnosing a legacy org.",
         "Includes at least one workflow graph (YAML + Mermaid) with agent/human/policy nodes, parallel fan-out, and at least one judgment anchor and one policy gate.",
         "Specifies all four substrate layers (model/agent/context/observability).",
+        "Names the scarce human judgment stop-lines and the retrievable context artifact that keeps them usable.",
         "Includes economics: cost, who-builds-and-maintains, and an ROI/payback trigger.",
         "Reports the redraw-vs-graft self-test as No (genuine redraw)."
       ]
@@ -29,6 +30,9 @@
         "Names the request as AI-enablement, not AI-Native, a difference in kind.",
         "States the org is not the target group of this methodology in unmodified form.",
         "Offers both honest options: the adjacent change-management methodology for enablement, AND a from-zero Track B carve-out as the only AI-Native path.",
+        "Treats the gate-out as the named work product, including the adverse path where a graft is mislabeled as native.",
+        "Names the human stop-line: leadership must choose enablement, a from-zero carve-out, or no native claim; the model does not authorize the label.",
+        "Writes the gate verdict, rationale, redirect options, and context assumptions into a retrievable decision artifact.",
         "Explains why grafting AI onto the existing graph won't move end-to-end throughput."
       ]
     },
@@ -43,6 +47,7 @@
         "Identifies a small set of genuine human judgment anchors and pushes the rest to agents.",
         "Checks the design against the seven sovereign-operator pillars.",
         "Includes at least one workflow graph and a deliberately lightweight four-layer substrate (naming what is deferred).",
+        "Writes the operating context and judgment anchors into a retrievable artifact the solo operator can reuse.",
         "Reports the redraw-vs-graft self-test as No."
       ]
     }
