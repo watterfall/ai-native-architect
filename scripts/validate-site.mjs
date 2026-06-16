@@ -9,9 +9,21 @@ const manifestPath = path.join(site, "assets/images/manifest.json");
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
 
 const failures = [];
+const githubBase = "https://github.com/watterfall/ai-native-architect/blob/main/";
 
 function assert(condition, message) {
   if (!condition) failures.push(message);
+}
+
+function getEvalFiles() {
+  const skillsDir = path.join(root, "skills");
+  if (!fs.existsSync(skillsDir)) return [];
+
+  return fs.readdirSync(skillsDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(skillsDir, entry.name, "evals", "evals.json"))
+    .filter((file) => fs.existsSync(file))
+    .map((file) => path.relative(root, file));
 }
 
 assert(index.includes("当执行不再稀缺，组织需要重新设计。"), "missing approved Chinese headline");
@@ -24,6 +36,14 @@ assert(
   /\bconst\s+REDIRECT_SECONDS\s*=\s*8\s*;?(?:\r?\n|$)/.test(app),
   "redirect duration must be exactly numeric 8"
 );
+assert(!index.includes('href="../docs/'), "evidence links must not use relative docs paths");
+assert(!index.includes('href="../skills-eval-workspace/'), "evidence links must not use relative benchmark paths");
+assert(
+  index.includes(`${githubBase}docs/VALIDATION.md`) &&
+    index.includes(`${githubBase}skills-eval-workspace/iteration-1/BENCHMARK.md`) &&
+    index.includes(`${githubBase}docs/SYSTEM-DESIGN.md`),
+  "evidence links must use absolute GitHub URLs"
+);
 assert(Array.isArray(manifest.assets), "manifest.assets must be an array");
 assert(manifest.assets.length === 12, "manifest must list exactly 12 assets");
 
@@ -35,10 +55,10 @@ for (const asset of manifest.assets) {
   assert(asset.alt && asset.alt.length >= 24, `${asset.file} needs useful alt text`);
 }
 
-const evalFiles = fs.globSync ? fs.globSync("skills/*/evals/evals.json") : [];
+const evalFiles = getEvalFiles();
 for (const file of evalFiles) {
   try {
-    JSON.parse(fs.readFileSync(file, "utf8"));
+    JSON.parse(fs.readFileSync(path.join(root, file), "utf8"));
   } catch (error) {
     failures.push(`${file} contains malformed JSON: ${error.message}`);
   }

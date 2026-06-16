@@ -77,7 +77,6 @@ function cancelRedirect() {
 }
 
 function startRedirect() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   redirectTimer = window.setInterval(() => {
     remaining -= 1;
     countdown.textContent = String(Math.max(remaining, 0)).padStart(2, "0");
@@ -122,15 +121,19 @@ startRedirect();
 stayButtons.forEach((button) => {
   button.addEventListener("click", () => {
     cancelRedirect();
-    document.querySelector("#atlas").scrollIntoView({ behavior: "smooth", block: "start" });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelector("#atlas").scrollIntoView({
+      behavior: reduceMotion ? "auto" : "smooth",
+      block: "start"
+    });
   });
 });
 
 moduleTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     cancelRedirect();
-    moduleTabs.forEach((item) => item.setAttribute("aria-selected", "false"));
-    tab.setAttribute("aria-selected", "true");
+    moduleTabs.forEach((item) => item.setAttribute("aria-pressed", "false"));
+    tab.setAttribute("aria-pressed", "true");
     renderModule(tab.dataset.module);
   });
 });
