@@ -36,6 +36,7 @@ flowchart TD
   subgraph L3["LAYER 3 · DISTRIBUTION"]
     R["OSS repo (clone / fork, MIT)"]
     P["Claude Code plugin marketplace<br/>(1-click, all 7 skills auto-discovered)"]
+    B["site/ buffer homepage<br/>distribution frontispiece, not source of truth"]
     W["Canon website · SHEET 17 item &#9313; (link + pitch)"]
   end
   V["COUNCIL VALIDATION<br/>adversarial review (10-role architecture · 5-role execution)<br/>&rarr; feedback &rarr; skills iterate<br/>(self-improving, M.06)"]
@@ -130,6 +131,9 @@ Operability is worthless if it is locked up. The skill layer is distributed thre
   one-click install. The repo is itself the marketplace (`.claude-plugin/marketplace.json` +
   `plugin.json`, **all seven skills auto-discovered from `skills/`** — installing the plugin brings the
   architect and all six execution skills at once).
+- **The `site/` buffer homepage**: a lightweight static distribution frontispiece. It states the premise,
+  briefly holds the transition, routes readers to the existing methodology homepage, and offers a compact
+  seven-skill atlas. It is **not** a source of truth; the canon and skill references remain authoritative.
 - **The canon website**: SHEET 17 (the Operator's Toolkit) carries the system as item ②, the
   executable companion to the copyable templates, with a link back to this repo. The toolkit's own lede
   always said it is "a toolbox that will grow"; the seven-skill system is that growth.

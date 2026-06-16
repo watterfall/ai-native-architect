@@ -1,13 +1,19 @@
 # AI-Native Architect
 
 **A two-tier, seven-skill AI-Native system over one shared kernel.** One skill *designs* a genuinely
-AI-Native organization; six skills *do the work* of their surface the AI-native way. It is the executable
-companion to the [AI Native Organization Methodology](#relationship-to-the-methodology) and runs in
+AI-Native organization; six skills *do the work* of their surface the AI-native way. It begins from one
+premise: **when execution is no longer scarce, the organization must be redesigned** (当执行不再稀缺，组织本身必须被重画).
+It is the executable companion to the
+[AI Native Organization Methodology](#relationship-to-the-methodology) and runs in
 [Claude Code](https://claude.com/claude-code) (and any Claude Agent SDK / claude.ai surface that loads
 skills).
 
 > **The thesis in one line:** organization = **distribution of judgment** x **flow of context**.
 > Scale is a free variable; management is the engineering of these two structures.
+
+The transition is not from "no AI" to "using AI." It is from **using AI** to **becoming AI-Native**:
+the question changes from *which tool helps this step?* to *how should execution, judgment, and context
+be redistributed?*
 
 ---
 
@@ -112,6 +118,21 @@ The skills are the full, rigorous version. If you just want to get your hands on
 - **[T1 Canvas](tools/t1-canvas.md)** — your judgment distribution × context flow, on one page.
 - **[Portable Prompt](tools/portable-prompt.md)** — paste into any chatbot (ChatGPT, Claude, Gemini) for
   an AI-assisted lite blueprint, no install.
+
+---
+
+## Visual entry point
+
+[`site/`](site/) is a lightweight static buffer page / frontispiece, not a replacement for the full
+methodology homepage. It states the core premise, waits briefly, routes readers onward to the existing
+methodology homepage, and offers a compact seven-skill atlas for people who want the executable layer
+first.
+
+Preview it locally:
+
+```bash
+python3 -m http.server 8751 -d site
+```
 
 ---
 
