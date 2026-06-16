@@ -54,9 +54,13 @@ is a category error. Don't optimize typing. Redraw the build around the bottlene
 
 Read `../../references/_core/redraw-vs-graft.md`, then apply its test to *this* build:
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 > Delete the agents from your plan. Does it collapse back to **a human typing every line and doing a manual
 > review at every step**? Then you sped up coding — you did not redraw the build. You produced
-> AI-enablement, not AI-Native engineering.
+> AI-enablement: AI-assisted rather than AI-Native engineering.
 
 A native build has agents as the **default** worker (generate / test / refactor / migrate at scale) and the
 human as the **exception**, present only at the few irreducible judgment nodes. If your plan still has a

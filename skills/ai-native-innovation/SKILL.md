@@ -56,6 +56,10 @@ coupling, entered from any face (`../../references/_core/canon-vocab.md`).
 `../../references/_core/redraw-vs-graft.md`. The fatal error of this era is treating **"an
 innovation process that uses AI"** as **"AI-native innovation."** It is a difference of kind.
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 | | AI-ENABLED (赋能) | AI-NATIVE (原生) |
 |---|---|---|
 | **The work** | brainstorm faster, generate more concepts | **abundant generation + a discipline of recognition** |

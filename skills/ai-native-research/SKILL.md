@@ -78,6 +78,10 @@ its scarcity is structural ("no machine-checkable right/wrong"), not a capabilit
 
 Apply `../../references/_core/redraw-vs-graft.md` to this request. The research-surface tell:
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 > If you deleted the AI from this workflow, would it collapse back into "a researcher reading faster
 > with an assistant"? **If yes, you are doing AI-enablement** — a six-month review compressed to six
 > days, same pipeline, bottleneck still stuck at "who decides which of these to trust and where to

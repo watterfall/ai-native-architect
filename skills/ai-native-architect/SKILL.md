@@ -66,6 +66,10 @@ substrate, the six worldviews, the seven pillars). Don't paraphrase the canon in
 The most common and most fatal error of this era is treating **"an organization that uses AI"**
 as an **"AI-Native organization."** The difference is not degree, it is **kind**.
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 | | AI-ENABLED (赋能) | AI-NATIVE (原生) |
 |---|---|---|
 | **Workflow** | old process + an AI assistant bolted on | a graph **redrawn around agents** |
@@ -81,7 +85,8 @@ bottleneck is an illusion.
 
 **The redraw-vs-graft test (apply it at the start and again at the end):**
 > If you deleted the AI from this design, would it collapse back into a normal org chart with
-> the same roles and handoffs? **If yes, you designed AI-enablement, not AI-Native.** A native
+> the same roles and handoffs? **If yes, you designed AI-enablement: AI-assisted rather than
+> AI-Native.** A native
 > design has agents as the *default* worker and humans as the *exception* — remove the agents
 > and the org doesn't exist in that shape at all.
 
@@ -106,7 +111,8 @@ Is the ask to redesign an operating structure so agents execute and humans judge
 ├─ INCUMBENT that wants to "transform the whole company" / "make our existing teams
 │  faster with AI" / "roll out copilots" — keep the org chart, add AI on top
 │        → OUT OF SCOPE (this is AI-enablement). Do NOT pretend to deliver an AI-Native
-│          architecture. Say so plainly: they are not the target group of THIS methodology.
+│          architecture. Say so plainly: this methodology is not the right fit for the
+│          request as framed.
 │          Then give them the only AI-Native move available to them → re-enter as TRACK B
 │          (win a patch of independent ground, build a new unit from zero). Point them to the
 │          adjacent methodology (phased decomposition, change management, protected greenfield
@@ -196,7 +202,7 @@ loops for a larger org), produce the graph as **YAML + a Mermaid diagram**:
 See `references/methodology-canon.md` (§ Four-layer substrate). Specify concrete choices, bottom
 to top, and *why each is load-bearing for this org*:
 1. **Model layer** — multiple foundation models (≥1 frontier API + open-weight for sovereign
-   workflows) behind a swap abstraction. *Single-vendor = API-dependent, not AI-Native.*
+   workflows) behind a swap abstraction. *Single-vendor = API-dependent rather than AI-Native.*
 2. **Agent layer** — orchestration + runtimes + tool/data integrations.
 3. **Context layer** — vector store / knowledge graph / decision logs + the practice that keeps
    them fresh. *This is what makes the agents yours.*

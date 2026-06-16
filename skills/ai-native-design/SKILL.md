@@ -47,6 +47,10 @@ end; the move is the same at every depth.
 
 Before doing the work, apply `../../references/_core/redraw-vs-graft.md` to *this* request:
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 > Delete the agents from the loop you are about to run. Does it collapse back to **one designer
 > hand-crafting one comp, then polishing it**? If yes, AI is a faster pencil — you have not
 > redrawn the loop. A native loop has *generation spreading many candidates* as the default and

@@ -50,6 +50,10 @@ Read the shared kernel before you operate anything serious — it is the spine, 
 Before you write a runbook, apply the redraw-vs-graft test to the thing you're being asked to run.
 The operator's version (generalize the row from `redraw-vs-graft.md`):
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 > If you switched off the agent fleet, would operations collapse back to the same people doing the
 > same handoffs at the same desks? **If yes, you've been handed a graft to babysit, not a native
 > org to operate.** A native org's *default worker is an agent*; humans run the cadence and hold a

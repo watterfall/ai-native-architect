@@ -55,6 +55,10 @@ protect a constitutive step *with* the learner, it is convenience theater, not a
 
 Run `../../references/_core/redraw-vs-graft.md` against your own surface before anything else.
 
+From AI-assisted work to AI-Native work, the question changes from "which tool helps this
+step?" to "how should execution, judgment, and context be redistributed?" The gate below is
+how you keep that distinction honest.
+
 **The grafting fallacy (FIG L.1), in learning terms.** The old learning pipeline is
 *acquire-info → internalize → transfer*. AI's firepower all lands on the first box — search faster,
 summarize faster, be explained to faster — but **that box's cost collapsed back in the search-engine
