@@ -20,7 +20,10 @@ assert(
   app.includes('const METHODOLOGY_HOME_URL = "../ainative/dist/index.html"'),
   "redirect constant must target ../ainative/dist/index.html"
 );
-assert(app.includes("REDIRECT_SECONDS = 8"), "redirect duration must remain explicit");
+assert(
+  /\bconst\s+REDIRECT_SECONDS\s*=\s*8\s*;?(?:\r?\n|$)/.test(app),
+  "redirect duration must be exactly numeric 8"
+);
 assert(Array.isArray(manifest.assets), "manifest.assets must be an array");
 assert(manifest.assets.length === 12, "manifest must list exactly 12 assets");
 
