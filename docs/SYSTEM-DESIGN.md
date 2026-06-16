@@ -124,7 +124,7 @@ should.
 
 ### Layer 3 — The Open Distribution
 
-Operability is worthless if it is locked up. The skill layer is distributed three ways, all open:
+Operability is worthless if it is locked up. The skill layer is distributed four ways, all open:
 
 - **The OSS repo** (this repository, MIT): clone, read, fork, extend.
 - **The Claude Code plugin marketplace**: `/plugin marketplace add watterfall/ai-native-architect` then
