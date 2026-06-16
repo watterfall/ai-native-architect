@@ -5,3 +5,4 @@ node_modules/
 __pycache__/
 skills-eval-workspace/iteration-1/*/
 .superpowers/
+.worktrees/
