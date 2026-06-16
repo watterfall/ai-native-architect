@@ -58,8 +58,7 @@ button {
 
 .page-shell {
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 52%, var(--paper) 52%, var(--paper) 100%);
+  background: var(--ink);
 }
 
 .cover {
@@ -69,6 +68,7 @@ button {
   padding: clamp(20px, 3vw, 34px);
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
 }
 
 .topline {
@@ -241,7 +241,10 @@ h2 {
   width: min(100%, var(--max));
   margin: 0 auto;
   padding: clamp(44px, 8vw, 96px) clamp(20px, 3vw, 34px);
+  background: var(--paper);
   color: var(--ink);
+  box-shadow: 0 0 0 100vmax var(--paper);
+  clip-path: inset(0 -100vmax);
 }
 
 .section-heading {
@@ -372,11 +375,6 @@ code {
 }
 
 @media (max-width: 820px) {
-  .page-shell {
-    background:
-      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 58%, var(--paper) 58%, var(--paper) 100%);
-  }
-
   .cover-grid,
   .module-card,
   .install {
