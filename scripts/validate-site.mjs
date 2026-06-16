@@ -16,7 +16,10 @@ function assert(condition, message) {
 
 assert(index.includes("当执行不再稀缺，组织需要重新设计。"), "missing approved Chinese headline");
 assert(index.includes("When execution is no longer scarce"), "missing approved English headline");
-assert(app.includes("const METHODOLOGY_HOME_URL"), "missing single redirect constant");
+assert(
+  app.includes('const METHODOLOGY_HOME_URL = "../ainative/dist/index.html"'),
+  "redirect constant must target ../ainative/dist/index.html"
+);
 assert(app.includes("REDIRECT_SECONDS = 8"), "redirect duration must remain explicit");
 assert(Array.isArray(manifest.assets), "manifest.assets must be an array");
 assert(manifest.assets.length === 12, "manifest must list exactly 12 assets");
@@ -31,7 +34,11 @@ for (const asset of manifest.assets) {
 
 const evalFiles = fs.globSync ? fs.globSync("skills/*/evals/evals.json") : [];
 for (const file of evalFiles) {
-  JSON.parse(fs.readFileSync(file, "utf8"));
+  try {
+    JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch (error) {
+    failures.push(`${file} contains malformed JSON: ${error.message}`);
+  }
 }
 
 if (failures.length) {
