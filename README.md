@@ -121,21 +121,6 @@ The skills are the full, rigorous version. If you just want to get your hands on
 
 ---
 
-## Visual entry point
-
-[`site/`](site/) is a lightweight static buffer page / frontispiece, not a replacement for the full
-methodology homepage. It states the core premise, waits briefly, routes readers onward to the existing
-methodology homepage, and offers a compact seven-skill atlas for people who want the executable layer
-first.
-
-Preview it locally:
-
-```bash
-python3 -m http.server 8751 -d site
-```
-
----
-
 ## Install
 
 ### As a Claude Code plugin (recommended) — brings all 7 skills

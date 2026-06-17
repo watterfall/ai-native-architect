@@ -18,26 +18,6 @@ Calibration anchor used throughout: **10 = flawless · 9 = excellent · 8.5 = cl
 7 = solid but real weaknesses · 5 = mediocre.** Reviewers were explicitly told not to inflate and to
 reserve 9+ for genuinely exceptional work.
 
----
-
-## V3 hardening target
-
-V3 hardening treats the buffer page and the executable layer as a single distribution surface: a reader
-should understand the premise quickly, then land in the real methodology / skill system without mistaking
-the frontispiece for the canon. The target is to catch three failure classes before release:
-
-1. **Artifact reality** — every public entry point must point to a real, inspectable artifact: the
-   methodology homepage, the `site/` buffer page, the seven skills, and the validation record. No claim
-   should depend on an implied artifact that a reader cannot open.
-2. **Boundary honesty** — the buffer page may introduce and route, but it must not replace the full
-   methodology homepage or dilute the AI-Native vs AI-enablement boundary. If a surface is a
-   frontispiece, say so.
-3. **Context compounding** — distribution changes must write back into the system's durable context:
-   README, system design, validation notes, and future eval targets should describe the same premise and
-   source-of-truth boundary.
-
----
-
 ## Architecture tier — `ai-native-architect`
 
 This tier's record stands from the v1 line and is unchanged by the v2 expansion (the architect's function
