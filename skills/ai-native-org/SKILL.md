@@ -42,6 +42,10 @@ Read the shared kernel before you operate anything serious — it is the spine, 
   stop-line** (never put an agent at the center of a trust/safety/relationship node the
   architecture reserved for a human).
 - `../../references/_core/redraw-vs-graft.md` — the gate you open with.
+- `../../references/_core/scripts/` — the kernel made mechanical (stdlib Python, no install):
+  `validate_workflow_graph.py` (validate any graph you're handed before operating it), `council.py`
+  (the 5-role gate, for reviewing the runbook), `essence_lint.py` (sweep the runbook for banned
+  framing). See `scripts/README.md`.
 
 ---
 
@@ -135,6 +139,10 @@ you don't add coordinators). The spec names, for *this* org (depth in
   before any delivery or irreversible step. A parallel fan-out with no join either strands work or
   lets a case complete while half of it floats. (This is the architect's executability contract,
   honored at runtime — you don't invent joins the graph lacks; you make the graph's joins *run*.)
+  If you were handed a workflow graph to operate, **validate it before you build the runbook on it**:
+  `python3 ../../references/_core/scripts/validate_workflow_graph.py <graph-or-blueprint>`. An implicit
+  join or a gate with no `join_policy` is a graph you can't safely dispatch against — surface it to
+  the architect rather than papering over it with a review queue.
 - **The orchestrator's own loop** — what the human/lead orchestrator actually does each cycle:
   scope, dispatch, watch the queue, clear escalations, write context back. Not "approve every step."
 

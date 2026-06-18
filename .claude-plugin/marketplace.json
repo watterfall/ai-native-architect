@@ -5,8 +5,8 @@
     "url": "https://github.com/watterfall"
   },
   "metadata": {
-    "description": "An AI-Native methodology system: an architecture-tier skill that designs an AI-Native organization, plus six execution-tier skills that do the work the AI-native way. The executable companion to the AI Native Organization Methodology.",
-    "version": "2.0.0"
+    "description": "An AI-Native methodology system: an architecture-tier skill that designs an AI-Native organization, plus six execution-tier skills that do the work the AI-native way, over a shared executable kernel layer (workflow-graph validator, council gate, essence linter). The executable companion to the AI Native Organization Methodology.",
+    "version": "2.1.0"
   },
   "plugins": [
     {

@@ -90,6 +90,11 @@ the shared spine, and both tiers reference it:
 - **`canon-vocab.md`** — the exact vocabulary: T1, the 16 bottlenecks, the four-layer substrate,
   M.01–06, the seven pillars (bilingual).
 - **`council.md`** — the 5-role adversarial review gate used as the pre-release quality bar.
+- **`scripts/`** (added v2.1.0) — the deterministic half of the kernel, made executable (stdlib Python,
+  no install): `validate_workflow_graph.py` (the graph-executability contract, checked), `council.py`
+  (the review-gate scaffold + PASS/FAIL aggregation), `essence_lint.py` (the banned-house-style sweep).
+  The spine *says* what must hold; these *check* the deterministic part of it, so the prose contract and
+  the artifact cannot drift. They mechanize the checks, not the judgment.
 
 **Architecture / judgment tier — `ai-native-architect`** (one skill). It *designs* an AI-Native
 organization: a **scope gate** (Track A greenfield / Track B carve-out / out-of-scope AI-enablement /

@@ -182,7 +182,11 @@ references/_core/                       # the shared kernel — written once, re
 ├── redraw-vs-graft.md                  # the gate every skill runs on its own task first
 ├── judgment-execution.md               # judgment-tier vs execution-tier split + the stop-lines (止步线)
 ├── canon-vocab.md                      # T1, 16 bottlenecks, four-layer substrate, M.01–06, seven pillars
-└── council.md                          # the 5-role adversarial review gate
+├── council.md                          # the 5-role adversarial review gate
+└── scripts/                            # the kernel made mechanical (stdlib Python, no install)
+    ├── validate_workflow_graph.py      #   the graph-executability contract, checked
+    ├── council.py                      #   the 5-role gate: scaffold + PASS/FAIL aggregation
+    └── essence_lint.py                 #   sweep a deliverable for banned framing / attestation tells
 
 skills/
 ├── ai-native-architect/                # ARCHITECTURE TIER — designs the org → Architecture Blueprint
@@ -208,6 +212,28 @@ docs/
 ├── SYSTEM-DESIGN.md                    # how the canon, the two-tier skill layer, and distribution form one system
 └── VALIDATION.md                       # the adversarial council track record (architecture + execution tiers)
 ```
+
+## The executable kernel layer (v2.1)
+
+The skills are mostly judgment-work, but three of their disciplines are **deterministic and were being
+re-derived by hand on every run**. v2.1 bundles them into [`references/_core/scripts/`](references/_core/scripts/)
+— stdlib-only Python, no install — so the skill *runs* the check instead of eyeballing it:
+
+- **`validate_workflow_graph.py`** — the graph-executability contract, mechanized. It checks that a
+  blueprint's workflow graph would actually run: every node typed, parallel branches reconverging at
+  explicit joins with wait-sets, multi-input gates declaring a `join_policy`, every human/community "no"
+  routed to a named node (not silently deadlocking an `all`-join), every compounding-context claim a real
+  `feeds:` edge. Run against this repo's own flagship example — already a 9.10 council score — it found
+  four graph gaps a human review had missed.
+- **`council.py`** — the 5-role review gate: prints the reviewer prompts and aggregates their scores into
+  the `mean ≥ 8.5 AND no dimension < 8.0` verdict, naming the binding fixes.
+- **`essence_lint.py`** — sweeps a finished deliverable for the banned house-style the canon forbids
+  (means/ends sloganeering, six-surfaces-as-pipeline, printed `X/5` scorecards, attestation tells,
+  placeholder algebra).
+
+Each self-verifies (`python3 <script> --self-test`). They mechanize the surface checks; whether the
+kernel is *actually* the spine stays a human / council judgment. See
+[`references/_core/scripts/README.md`](references/_core/scripts/README.md).
 
 ## How it was validated
 

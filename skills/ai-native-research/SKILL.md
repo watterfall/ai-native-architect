@@ -195,6 +195,9 @@ the collaborator seat (refusing to let AI even lay out candidates) keeps you tra
   cell *suspended*, not auto-killed?
 
 ## References (read on demand)
+- `../../references/_core/scripts/` — shared tools (stdlib, no install): `council.py` (the 5-role review
+  gate) and `essence_lint.py` (sweep the dossier for banned framing / attestation tells). See
+  `scripts/README.md`.
 - `references/the-fork-and-the-gradient.md` — the kernel ② fork (machine-checkable → abundance vs.
   constitutive → bedrock), the verifiability gradient, the moving frontier, why the cut keeps the thesis
   falsifiable.

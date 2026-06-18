@@ -46,10 +46,19 @@ highest-leverage gaps); fix those, then re-run the full panel. Iterate until PAS
 
 ## How to run it (mechanics)
 
+The scaffold and the gate arithmetic are tooled in `scripts/council.py` (stdlib, no install) so the
+five role prompts and the PASS/FAIL rule stay identical every run — spend your judgment on the review,
+not on re-deriving the harness:
+
+- `python3 scripts/council.py --scaffold <artifact>` prints the five reviewer prompts to dispatch.
+- `python3 scripts/council.py <scores.json>` aggregates `{dimension, score, top_fix}` rows into the
+  verdict, naming the binding (lowest, gate-blocking) dimensions and their `top_fix`.
+
 - Spawn the five reviewers in parallel (one subagent each), each given the artifact + this file + the
   relevant `_core` files + (for domain expertise) the surface's source page.
 - Each returns `{dimension, score, evidence, top_fix}` as structured output.
-- Aggregate: compute mean, flag any dim < 8.0, collect `top_fix` from the binding (lowest) dimensions.
+- Aggregate with `council.py` (it computes the mean, flags any dim < 8.0, and surfaces the binding
+  fixes); or do it by hand if you prefer.
 - This complements — does not replace — the skill-creator quantitative eval (with-skill vs baseline runs,
   benchmark, viewer). The council is the *qualitative/adversarial* gate; the eval is the *quantitative*
   one. Pass both before publishing.

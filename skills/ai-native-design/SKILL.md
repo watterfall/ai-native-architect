@@ -224,6 +224,9 @@ told the reader it complies.
 - `../../references/_core/judgment-execution.md` — the four-step loop + the design stop-line (taste).
 - `../../references/_core/canon-vocab.md` — exact shared vocabulary (six surfaces, no pipeline).
 - `../../references/_core/council.md` — the 5-role review gate (run a light version as self-check).
+- `../../references/_core/scripts/` — shared tools (stdlib, no install): `council.py` (the review-gate
+  scaffold + aggregation) and `essence_lint.py` (sweep the deliverable for banned framing). See
+  `scripts/README.md`.
 - `references/candidate-spread-loop.md` — DSN 07 in depth: spread → critique → steer → converge → distill.
 - `references/taste-engine.md` — the discriminating spec + the taste scorecard (decomposing "good").
 - `references/design-tokens-as-code.md` — making "good" machine-enforceable; the two-layer guardrail.

@@ -197,6 +197,12 @@ loops for a larger org), produce the graph as **YAML + a Mermaid diagram**:
   store must appear in the YAML, because a learning loop that lives only in prose does not exist.
   (4) For each `feeds:` store, say in one line *what* is written and *what reads it back*, so the
   context layer is a system, not a label.
+- **Validate the graph mechanically — don't eyeball it.** These rules are a deterministic contract, so
+  run the checker on your blueprint and fix every ERROR before treating the graph as runnable:
+  `python3 ../../references/_core/scripts/validate_workflow_graph.py <your-blueprint.md>`. It catches the
+  exact failures above (implicit joins, a multi-input gate with no `join_policy`, a human node missing
+  its verdict set, an unrouted "no", a context-write that's prose not an edge) that pass a human read.
+  It ran on this system's own flagship example and found gaps a 9.0 council review had missed — so run it.
 
 ### Step 5 — Specify the four-layer substrate
 See `references/methodology-canon.md` (§ Four-layer substrate). Specify concrete choices, bottom
@@ -382,10 +388,11 @@ thing inline.
 - **Does context compound?** Every important step should `feed:` something retrievable downstream.
   A design with no decision log / knowledge store is generic, not native.
 - **Did I delete serial edges?** The "after" graph should have visible parallel fan-out.
-- **Is the graph runnable?** Do parallel branches (incl. judgment fan-outs) reconverge at a join
-  *node* with a wait-set before delivery? Does every multi-input gate declare a `join_policy`? Is
-  every claimed context-write an actual edge (not prose only)? **Does every human/community NO have a
-  named home** (a decline/amend/abort node), or does a "no" silently stall an `all`-join?
+- **Is the graph runnable?** Don't answer this by eye — run
+  `validate_workflow_graph.py` on the blueprint and clear every ERROR. It checks that parallel branches
+  (incl. judgment fan-outs) reconverge at a join *node* with a wait-set before delivery, that every
+  multi-input gate declares a `join_policy`, that every claimed context-write is an actual edge, and
+  that every human/community NO has a named home rather than silently stalling an `all`-join.
 - **Four layers all present?** Especially observability — a design without it scales failure.
 - **Does the economics tie out?** Opportunity sized from the brief's own numbers with each headline
   *recomputed inline* (components sum to the stated range — no `22×$16k=$602k` contradictions); a
@@ -414,6 +421,10 @@ thing inline.
   (the gate) · `judgment-execution.md` (the judgment/execution split + stop-lines) · `canon-vocab.md`
   (T1, the 16 bottlenecks, the four-layer substrate, M.01–06, the seven pillars) · `council.md` (the
   5-role review gate). The architecture-tier references below go deeper on the *design* procedure.
+- `../../references/_core/scripts/` — the **kernel made mechanical** (stdlib Python, no install):
+  `validate_workflow_graph.py` (the graph-executability contract — run it on every blueprint),
+  `council.py` (the review-gate scaffold + PASS/FAIL aggregation), `essence_lint.py` (sweep the
+  finished blueprint for banned framing / attestation tells). See `scripts/README.md`.
 - `references/ai-native-kernel.md` — **the kernel/essence: why AI-Native is the future organizational
   form** (the scarcity inversion, the four shifts, the 0–5 essence test, build-to-ride-the-curves).
   **Read second, right after T1 — make it the spine of every design.**
