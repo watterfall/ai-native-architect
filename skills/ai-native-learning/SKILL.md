@@ -171,8 +171,8 @@ The agent's only legitimate seat in the error-correction loop (FIG L.4) is **④
 loop is bypassed — the artifact ships while the learner's structure stays still.
 
 ### Step 4 — Stand up the reflection store (反思库)
-See `references/artifacts-spec.md`. This is the compounding-context layer — and per the kernel a loop
-that lives only in prose **does not exist**. Specify the store as real fields with a real write-back
+See `references/artifacts-spec.md`. This is the compounding-context layer — a learning loop that
+lives only in prose **does not exist** (M.04). Specify the store as real fields with a real write-back
 edge, not a vibe. Minimum entry: a **self-answer field** (the learner's hypothesis, written *before*
 asking the agent), the deviation found, *why* it was wrong, a transfer hook to related errors, and a
 **next-review date**. The store compounds: by month-three you can diff your mental model and see which
@@ -292,6 +292,8 @@ summary; don't dump the protocol inline.
 - `../../references/_core/judgment-execution.md` — the four-step loop and the learning stop-line
   (never offload the desirable difficulty). **The reverse-branch logic lives here.**
 - `../../references/_core/canon-vocab.md` — exact shared terms (don't paraphrase the canon to mush).
+- `../../references/_core/scripts/` — shared tools (stdlib, no install): `council.py` (the 5-role review
+  gate) and `essence_lint.py` (sweep the learning protocol for banned framing). See `scripts/README.md`.
 - `references/stop-line-criterion.md` — the two-dimension criterion, the four cells, three worked
   judgments, the offload-boundary template.
 - `references/scaffold-and-resistance.md` — the three pillars, the error-correction loop, resistance as

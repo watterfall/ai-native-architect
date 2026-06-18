@@ -59,8 +59,8 @@ nodes:
   - id: eng_signoff     ; type: human  ; owner: "engineer-founder" ; parallelizable: false   # the one irreducible judgment
   - id: deliver_gate    ; type: policy ; owner: "engineer-founder" ; parallelizable: false   # irreversible: release to operator
   - id: amend_loop      ; type: agent  ; owner: ""                 ; parallelizable: false   # re-run pipeline on engineer's correction
-  - id: decline_node    ; type: human  ; owner: "operator-founder" ; parallelizable: false   # caveated no-go / out-of-competence exit
-  - id: postmortem      ; type: agent  ; owner: ""                 ; parallelizable: false   # writes outcome back when project is executed
+  - id: decline_node    ; type: human  ; owner: "operator-founder" ; parallelizable: false ; terminal: true   # caveated no-go / out-of-competence exit
+  - id: postmortem      ; type: agent  ; owner: ""                 ; parallelizable: false ; terminal: true   # writes outcome back when project is executed
 
 edges:
   - { from: intake_screen,  to: reconstruct,    trigger: "folder accepted as in-envelope", feeds: "ctx/asset-registry" }
@@ -85,14 +85,21 @@ edges:
   - { from: deliver_gate,   to: postmortem,      trigger: "operator executes project; actuals returned", feeds: "ctx/outcome-ledger" }
 
 joins:
+  - id: sensitivity
+    join_inputs: [cost_model, schedule_gen]    # stressed re-run needs both the base cost and base schedule
+    join_policy: all
   - id: assembled
     join_inputs: [redflag_screen]      # redflag_screen itself joins the six analytical branches below
     join_policy: all
   - id: redflag_screen
     join_inputs: [cost_model, schedule_gen, permit_xref, weather_vessel, sensitivity]
     join_policy: all                   # no dossier reaches the human until ALL analytical branches AND the cross-checks complete
+  - id: decline_node
+    join_inputs: [intake_screen, eng_signoff]  # a case is declined at intake OR at sign-off — never both
+    join_policy: mutually_exclusive_by: stage
 
 verdict_sets:
+  intake_screen: { approve: reconstruct, decline: decline_node }
   eng_signoff: { approve: deliver_gate, amend: amend_loop, decline: decline_node }
 
 judgment_anchors: [intake_screen, eng_signoff]

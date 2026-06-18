@@ -77,3 +77,9 @@ Write the deliverable as one practitioner's reasoned work, not a compliance repo
 narrate your own conformance ("judgment node here, per the kernel"). The reader should *infer* the rigor
 because the work holds together. The kernel and canon should disappear into the work, load-bearing in
 substance, not announced.
+
+Before you ship a deliverable, sweep it for the deterministic tells of attestation and banned
+house-style: `python3 scripts/essence_lint.py <deliverable>`. It catches means/ends sloganeering, the
+six-surfaces-as-pipeline framing, printed `X/5` essence scorecards, self-narration ("per the kernel"),
+and placeholder algebra. It is a backstop for the surface tells only — whether the kernel is *actually*
+the spine stays a human / council judgment.

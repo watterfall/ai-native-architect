@@ -267,6 +267,9 @@ artifacts carry the proof.
 - `../../references/_core/redraw-vs-graft.md` — the gate and the scope rubric.
 - `../../references/_core/judgment-execution.md` — the four-step loop and the stop-lines.
 - `../../references/_core/canon-vocab.md` — exact shared vocabulary (T1, M.01–06, four-layer substrate).
+- `../../references/_core/scripts/` — shared tools (stdlib, no install): `council.py` (the 5-role review
+  gate) and `essence_lint.py` (sweep the deliverable for banned framing / attestation tells before
+  shipping). See `scripts/README.md`.
 - `references/spec-driven.md` — the spec ladder, acceptance criteria, the living-document discipline.
 - `references/verification.md` — the verifiability gradient, independent verifiers, eval-as-frozen-judgment.
 - `references/delegate-review-own.md` — the three-tier division of labor and how to route work.

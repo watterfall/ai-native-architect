@@ -308,6 +308,9 @@ Write the portfolio to a file; return the path plus a 2–3 line summary. Do not
 ---
 
 ## References (read on demand)
+- `../../references/_core/scripts/` — shared tools (stdlib, no install): `council.py` (the 5-role review
+  gate) and `essence_lint.py` (sweep the portfolio / bet sheet for banned framing). See
+  `scripts/README.md`.
 - `references/scope-and-fit.md` — the two-gate scope rubric, the verbatim out-of-scope redirect,
   the four situations where the compass explicitly does not apply, the emotional-labor boundary.
 - `references/judgment-and-stop-line.md` — the allocation rule (externalizable × reversible), the

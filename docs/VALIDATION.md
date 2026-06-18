@@ -57,7 +57,8 @@ Every score gain came from a **generalizable** fix folded back into the skill, n
   two most fragile inputs, and name the one input whose error flips the recommendation.
 - **The workflow graph must run.** Joins are first-class nodes with wait-sets; multi-input gates declare
   a `join_policy`; and every human / community "no" terminates in a named node instead of silently
-  deadlocking an `all`-join.
+  deadlocking an `all`-join. **As of v2.1.0 this lesson is mechanized** — see "the kernel made
+  mechanical" below.
 - **Beyond the prevention gate.** Trace harm to the *last human harmed* (the patient, the crew, the
   household), not the institutional counterparty; name the operative legal *instrument* (the SMTA, the
   engagement-letter reliability cap, the accreditation standard), not just the regime.
@@ -134,6 +135,34 @@ Per-surface highlights of what the skill forced over an already-strong baseline:
 discipline — most decisively by keeping work at the execution layer and designing the adverse path +
 compounding context. No skill regressed below baseline on any task. The lightweight pass **supports** the
 adversarial council PASS (means 8.8–9.0).
+
+---
+
+## v2.1.0 — the kernel made mechanical
+
+The council is the *qualitative* gate. v2.1.0 adds the *deterministic* half: three stdlib-only scripts in
+[`references/_core/scripts/`](../references/_core/scripts/) that turn the most-repeated manual checks —
+previously re-derived by hand on every run — into a check the skill can execute. This is the
+skill-creator principle "bundle the repeated workflow into a script, then tell the skill to use it,"
+applied to the shared kernel.
+
+| Script | Mechanizes | Wired into |
+|---|---|---|
+| `validate_workflow_graph.py` | the graph-executability contract (typing · explicit joins with wait-sets · `join_policy` on multi-input gates · full verdict sets with named negative paths · real `feeds:` edges) | `ai-native-architect` (Step 4 + self-check), `ai-native-org` (validate a handed-over graph) |
+| `council.py` | the 5-role gate — role-prompt scaffold + the `mean ≥ 8.5 AND no dim < 8.0` aggregation, naming the binding fixes | `council.md`; all seven skills |
+| `essence_lint.py` | the banned-house-style sweep (means/ends sloganeering · six-surfaces-as-pipeline · printed `X/5` scorecards · attestation tells · placeholder algebra) | `judgment-execution.md`; all seven skills |
+
+Each script self-verifies (`--self-test`). They mechanize, they don't replace judgment: whether the
+kernel is *actually* the spine stays a human / council call.
+
+**The validator earned its place immediately.** Run against this repo's own flagship example —
+`examples/offshore-wind-decommissioning/blueprint.md`, which had cleared the **10-role council at 9.10** —
+it found **four graph-executability gaps a human review had missed**: an undeclared verdict set on the
+intake judgment node, two implicit joins (the stressed-sensitivity re-run and the OR-merge decline exit),
+and a multi-input gate with no `join_policy` — plus a silently-dropped edge (a `;` inside a quoted trigger
+the prose contract never caught). All were fixed; the example now validates clean (`exit 0`). A 9.10
+artifact still had runnable-graph defects that only a mechanical check surfaces — which is exactly the case
+for mechanizing the contract.
 
 ---
 
