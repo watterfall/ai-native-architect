@@ -1,21 +1,11 @@
 ---
 name: ai-native-innovation
 description: >-
-  Actually RUN innovation the AI-native way — turn an abundance of cheap-to-generate
-  ideas into a real idea portfolio / innovation pipeline, with signal filters that
-  separate true signal from noise and false-signal, a bet allocation (what to back,
-  how much), and false-signal guards. Use this whenever someone wants to "find / pick /
-  validate / prioritize what to build next", "run an innovation pipeline or idea funnel",
-  "decide which AI idea is worth betting on", "我们有一堆点子/方向，不知道该押哪个", "怎么判断
-  这个方向值不值得做 / 是不是伪需求", "build an innovation process / R&D pipeline / new-bets
-  portfolio with AI", "我们想做创新 / 探索新方向 / 怎么用 AI 做创新", or is drowning in
-  plausible-looking options and needs to decide what's real. Trigger even when the user
-  frames it as "help me brainstorm more ideas" or "generate a bunch of concepts" — this
-  skill is what correctly tells them generation is the cheap half and the scarce work is
-  value-perception (which signal is real, what to back), and redirects effort there. This
-  RUNS innovation and produces a portfolio + bet sheet + falsification log; it does NOT
-  design an innovation org (that is ai-native-architect). Grounded in the "AI Native 创新
-  方法论" — when possibility is abundant, the scarce thing is not ideas but value perception.
+  Use when someone must decide what to build or bet on amid an abundance of cheap-to-generate
+  ideas — "find / pick / validate / prioritize what to build next", "run an innovation pipeline
+  or idea funnel", "decide which AI idea is worth betting on", "我们有一堆点子/方向，不知道该押哪个",
+  "怎么判断这个方向值不值得做 / 是不是伪需求", "我们想做创新 / 探索新方向". Trigger even on "help me
+  brainstorm more ideas" or "generate a bunch of concepts".
 ---
 
 # AI-Native Innovation — run the compass, not the idea factory

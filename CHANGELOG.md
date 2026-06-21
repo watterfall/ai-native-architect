@@ -3,6 +3,28 @@
 All notable changes to **ai-native-architect** are recorded here. The system is grounded in the
 *AI Native Organization Methodology* (organization = distribution of judgment × flow of context).
 
+## [Unreleased] — the skills, made mechanical
+
+Applies the same skill-creator principle the kernel scripts use — *bundle the repeated check into a
+script, then hold the artifact to it* — to the **skills themselves**, against the `writing-skills`
+authoring bar.
+
+### Added
+
+- **`references/_core/scripts/validate_skills.py`** — a meta-gate over the seven `SKILL.md` interfaces.
+  ERROR (publish floor): frontmatter over the 1024-char spec cap, or a `description` that doesn't open
+  with "Use when". WARN: body word budget, version drift across manifests, orphaned / unreachable
+  references. `--self-test` included; documented in `references/_core/scripts/README.md`.
+
+### Changed
+
+- **All seven `description` fields rewritten to "Use when …" trigger-only form** (was: leading with what
+  the skill *does*, the SDO anti-pattern that makes agents follow the summary instead of reading the
+  skill body). Frontmatter brought back under the 1024-char spec cap and each description under the
+  500-char target, while preserving the bilingual (EN + 中文) trigger phrases. Verified: gate exits 0;
+  a 3-rep fresh-context routing micro-test routed 42/42 tasks (including edge framings) to the correct
+  skill.
+
 ## [2.1.0] — the kernel made mechanical
 
 Applies the skill-creator principle *"bundle the repeated workflow into a script, then tell the skill to

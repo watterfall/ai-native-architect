@@ -1,23 +1,11 @@
 ---
 name: ai-native-learning
 description: >-
-  Build and run learning the AI-native way: produce a concrete learning scaffold/protocol that
-  preserves the desirable difficulty, draws an explicit offload-boundary (what the learner does vs.
-  what the agent does), and stands up a reflection store + a progress dashboard. Use this whenever
-  someone wants to "actually learn / get good at / build skill in X with AI" — "learn to code / a
-  language / a subject with AI", "study for X", "how do I use AI to learn without it doing the
-  thinking for me", "I keep nodding along to ChatGPT but can't reproduce it", "set up a study /
-  practice / spaced-repetition system", "我想用 AI 学会 X / 怎么用 AI 学习又不被它替我思考 / 制定一个
-  学习计划 / 防止认知卸载 / 守住认知主权". Trigger even when the user only asks for "explain X" or "summarize
-  X to learn it" or "be my tutor / make me a study plan" — this skill is what correctly tells them
-  that faster answers are NOT learning, separates the abundance-able lookup from the constitutive
-  struggle, and keeps the difficulty that builds capability with the human. This produces an
-  executable learning protocol + artifacts (scaffold, reflection store, dashboard) for an
-  individual internalizing a capacity — NOT an org-scale training program, curriculum, or
-  school-reform design (that's the architect's surface). Grounded in the AI-Native learning
-  methodology (cognitive sovereignty): execution = lookup/answers/explanations turns abundant;
-  the scarce, un-outsourceable thing is experience, reflection, transfer, and the difficulty that
-  rebuilds cognitive structure.
+  Use when an individual wants to actually learn or build skill in something with AI without
+  offloading the thinking — "learn to code / a language / a subject with AI", "study for X",
+  "use AI to learn without it doing the thinking for me", "I nod along to ChatGPT but can't
+  reproduce it", "我想用 AI 学会 X", "怎么用 AI 学习又不被它替我思考", "制定一个学习计划", "防止认知卸载 /
+  守住认知主权". Trigger even on "explain X", "be my tutor", or "make me a study plan".
 ---
 
 # AI-Native Learning — building the loop, not buying faster answers

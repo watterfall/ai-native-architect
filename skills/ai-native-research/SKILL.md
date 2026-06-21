@@ -1,20 +1,11 @@
 ---
 name: ai-native-research
 description: >-
-  Actually DO research the AI-native way and return a defensible finding — not a faster paper mill,
-  and not "design a research org." Use this when someone wants to answer a research question,
-  run a literature review / evidence synthesis, vet a batch of AI-generated claims or hypotheses,
-  decide which finding to trust, integrate scattered results into one understanding, build or
-  contribute to a knowledge graph / evidence base, judge whether a result replicates, or asks
-  "is this claim credible", "what does the evidence actually say", "synthesize these papers",
-  "which of these hypotheses is worth pursuing", "我想研究 X / 帮我做个文献综述 / 这个结论可信吗 /
-  这些 AI 生成的发现哪个值得信 / 把这些研究整合一下 / 这个研究方向值得做吗". Trigger even when the
-  user just says "research this for me" or "summarize the state of the art" — this skill is what
-  correctly produces a finding with a credibility ledger (claims graded Ⅰ–Ⅴ, claims kept unmixed
-  from evidence), a knowledge-graph contribution, and a blind-spot register, while keeping the
-  worth-knowing call and the final credibility verdict with the human. It produces a research
-  finding + evidence artifacts, NOT an org design (use ai-native-architect for that) and NOT a
-  literature-search tool's raw dump.
+  Use when someone wants to answer a research question, run a literature review or evidence
+  synthesis, vet AI-generated claims or hypotheses, decide which finding to trust, integrate
+  scattered results, build a knowledge graph, or judge whether a result replicates — "is this
+  claim credible", "what does the evidence say", "synthesize these papers", "帮我做个文献综述",
+  "这个结论可信吗", "这些 AI 生成的发现哪个值得信", "这个研究方向值得做吗". Trigger even on "research this for me".
 ---
 
 # AI-Native Research

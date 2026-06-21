@@ -1,18 +1,12 @@
 ---
 name: ai-native-architect
 description: >-
-  Design a genuinely AI-Native organizational architecture from a business idea, startup
-  entry point, new organization, new internal unit, or an incumbent's from-zero rebuild.
-  Use this whenever someone wants to "design / architect / structure / build an AI-native
-  (AI原生) company or organization", "rebuild our org around AI / agents", "what should an
-  AI-first company look like", "how do I structure a one-person / tiny AI company",
-  "我想做一个 AI 原生的公司/组织/团队 怎么设计", or asks for an org/operating-model design where
-  agents do the execution and humans hold a few judgment nodes. Trigger even when the user
-  says "AI transformation" or "add AI to our company" — this skill is what correctly tells
-  them whether they want AI-Native reconstruction or mere AI-enablement, and redirects the
-  latter. This produces an architecture (org design), NOT app code, model selection, or a
-  single prompt; it is grounded in the "AI Native 组织方法论" (organization = distribution of
-  judgment × flow of context).
+  Use when someone wants to design, architect, structure, or rebuild an organization around
+  AI and agents — a startup, a new company or internal unit, or an incumbent's from-zero
+  rebuild; or asks to "design an AI-native (AI 原生) company/org", "rebuild our org around AI",
+  "what should an AI-first company look like", "我想做一个 AI 原生的公司/组织 怎么设计". Trigger even
+  on "AI transformation" or "add AI to our company" — this skill decides whether they need
+  AI-Native reconstruction or just AI-enablement.
 ---
 
 # AI-Native Architecture Architect
