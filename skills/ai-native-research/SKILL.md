@@ -1,20 +1,11 @@
 ---
 name: ai-native-research
 description: >-
-  Actually DO research the AI-native way and return a defensible finding — not a faster paper mill,
-  and not "design a research org." Use this when someone wants to answer a research question,
-  run a literature review / evidence synthesis, vet a batch of AI-generated claims or hypotheses,
-  decide which finding to trust, integrate scattered results into one understanding, build or
-  contribute to a knowledge graph / evidence base, judge whether a result replicates, or asks
-  "is this claim credible", "what does the evidence actually say", "synthesize these papers",
-  "which of these hypotheses is worth pursuing", "我想研究 X / 帮我做个文献综述 / 这个结论可信吗 /
-  这些 AI 生成的发现哪个值得信 / 把这些研究整合一下 / 这个研究方向值得做吗". Trigger even when the
-  user just says "research this for me" or "summarize the state of the art" — this skill is what
-  correctly produces a finding with a credibility ledger (claims graded Ⅰ–Ⅴ, claims kept unmixed
-  from evidence), a knowledge-graph contribution, and a blind-spot register, while keeping the
-  worth-knowing call and the final credibility verdict with the human. It produces a research
-  finding + evidence artifacts, NOT an org design (use ai-native-architect for that) and NOT a
-  literature-search tool's raw dump.
+  Use when someone wants to answer a research question, run a literature review or evidence
+  synthesis, vet AI-generated claims or hypotheses, decide which finding to trust, integrate
+  scattered results, build a knowledge graph, or judge whether a result replicates — "is this
+  claim credible", "what does the evidence say", "synthesize these papers", "帮我做个文献综述",
+  "这个结论可信吗", "这些 AI 生成的发现哪个值得信", "这个研究方向值得做吗". Trigger even on "research this for me".
 ---
 
 # AI-Native Research
@@ -109,7 +100,7 @@ This is the four-step kernel loop (`judgment-execution.md` §the loop) specializ
 
 ### Step 1 — Frame: stand up the evidence base *before* generating (③ context as infrastructure, first)
 The most common way to misuse a knowledge graph is as a **warehouse** — generate first, file later. That
-reverses the load-bearing order. In AI-native research the **traceable evidence base is the spec**: it
+reverses the load-bearing order. In AI-native research the **traceable evidence base is the spec** (M.03): it
 must exist *before* generation and *constrain* it. Write down, up front, **what counts as credible
 evidence, what counts as a conflict, and what must trace to raw data.** Then generation has a target to
 align to, and the base becomes a live guardrail — unsourced claims get blocked at the door, conflicts get
@@ -153,6 +144,9 @@ agent feeds candidate material to hand. Then the human renders the two reserved 
 - **The worth-knowing call** — which finding is worth knowing/pursuing, and for whom under which value
   frame. This is constitutive, not a capability ("worth" has no frame-independent right answer; AI learns
   the *community mean* of taste, never the off-mean frontier value). See `references/worth-knowing.md`.
+  This is the *worth-knowing* direction call (is this question/finding worth pursuing as research); the
+  *worth-betting* direction call (which direction to back as an affordable-loss bet) belongs to
+  `ai-native-innovation`.
 
 Both are real gates with teeth: each carries a full disposition set — **{vouch / vouch-with-caveats /
 withhold}** — and a non-vouch verdict terminates in a *named* place (a caveated-finding section, a

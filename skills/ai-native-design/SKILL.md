@@ -1,20 +1,11 @@
 ---
 name: ai-native-design
 description: >-
-  Produce design the AI-native way — actually make the artifact, not "design a design org."
-  Use this whenever someone wants to design / build / redesign a product, an interface, a
-  landing page, a component, a flow, a brand expression, a motion piece, or a design system
-  and wants it done in the AI-native mode: cheap multi-draft generation handed to agents, with
-  human taste as the scarce judgment that chooses among the drafts. Trigger on "design a
-  landing page / UI / app screen / component / flow / poster / brand", "make this look good /
-  less generic / less like AI slop", "build a design system / design tokens", "spread a bunch
-  of variations and help me pick", "我想做一个界面/落地页/产品设计/设计系统", "帮我设计…再帮我挑一版",
-  "怎么让设计不那么 AI 味 / 不同质化", "判断多稿 / 品味 / 设计即代码". Trigger even when the user only
-  says "design X" without naming AI — this skill is what produces a distinctive artifact + a
-  taste rationale + a 指纹 (fingerprint) anti-homogenization check + design tokens, instead of
-  one more slop draft. It does NOT design an organization (that is ai-native-architect); it
-  delivers a real design artifact and the judgment trail behind it. Positioning spans product /
-  interaction / system / expression / motion — not just UI skinning.
+  Use when someone wants to design, build, or redesign a product, interface, landing page,
+  component, flow, brand, motion piece, or design system — "design a landing page/UI/app
+  screen/component/poster/brand", "make this look good / less generic / less like AI slop",
+  "build a design system / design tokens", "我想做一个界面/落地页/产品设计/设计系统", "帮我设计…再帮我
+  挑一版", "怎么让设计不那么 AI 味 / 不同质化", "判断多稿/品味". Trigger even on a bare "design X".
 ---
 
 # AI-Native Design
@@ -146,7 +137,7 @@ are in `references/five-instruments.md`. Use them; don't reinvent them per proje
 
 ## The irreducible human node + the stop-line
 
-**Judgment node: TASTE — choosing among the abundant drafts, and holding the human in them.**
+**Judgment node: TASTE — choosing among the abundant drafts, and holding the human in them (M.05).**
 Per `../../references/_core/judgment-execution.md`, this node must be a real gate with teeth, not
 a label:
 
@@ -159,7 +150,7 @@ a label:
   not on catching mechanical defects. A taste gate that just rubber-stamps the first
   good-looking comp is theater.
 
-> **止步线 — never offload taste.** Generating drafts is abundant; *judging* them is the scarce
+> **stop-line (止步线) — never offload taste.** Generating drafts is abundant; *judging* them is the scarce
 > act, and it is the entire value of the craft now that making is cheap. Do not hand the final
 > "which one, and why" to the model — that is exactly the work that was always yours. (And
 > beware its quiet cousin: *treating taste as fully computable*. Soft criteria — "for whom," "has

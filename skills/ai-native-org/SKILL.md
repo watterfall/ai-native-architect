@@ -1,22 +1,12 @@
 ---
 name: ai-native-org
 description: >-
-  OPERATE / RUN an AI-Native organization day to day — orchestrate the agent fleet, run the
-  operating cadence, route exceptions to the human judgment nodes the architecture defined, and
-  keep the context system fresh. Use this once an AI-Native org (or one unit of it) exists or is
-  in-flight and the question shifts from "how should it be structured" to "how do we run it":
-  "we have agents doing the work — how do we operate this", "set up our agent ops / orchestration
-  / on-call", "how do we keep the context from rotting", "what should escalate to a human and
-  who", "our agents are drifting / hallucinating in production — set up observability + a review
-  queue", "运营 / 跑 / 编排我们的 AI 原生组织 / agent 团队", "怎么让 agent 日常运转、出了异常找谁",
-  "上下文怎么保鲜不腐烂", "可观测 + 审查队列怎么搭". Trigger even when the user only says "manage
-  our AI agents" or "AI ops" — this skill is what tells them operating an AI-Native org is running
-  a steered feedback system (orchestrate fleet · route exceptions to named humans · compound
-  context), NOT building dashboards on a graph someone else froze. This produces an OPERATING
-  RUNBOOK (orchestration spec + review-queue routing + cadence + context-upkeep practice), NOT an
-  org design. If the org has not been designed yet — where judgment sits, what the graph is — that
-  is `ai-native-architect`'s job; this skill operates within and up to those nodes, it does not
-  redraw them.
+  Use when an AI-Native org (or one unit) already exists or is in-flight and the question
+  shifts from how to structure it to how to run it day to day — "we have agents doing the work,
+  how do we operate this", "set up our agent ops / orchestration / on-call", "what should
+  escalate to a human and who", "agents drifting / hallucinating in prod — set up observability
+  + a review queue", "运营/跑/编排我们的 AI 原生组织 / agent 团队", "上下文怎么保鲜", "可观测 + 审查
+  队列怎么搭". Trigger even on "manage our AI agents" or "AI ops".
 ---
 
 # AI-Native Org Operator

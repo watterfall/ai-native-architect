@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-learning",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For learning cases, the protocol must keep desirable difficulty with the human, pin the agent to the verify seat, ship a reflection store with a self-answer field and a named write-back edge, and measure reproduction/transfer rather than throughput.",
+  "mechanical_checks": [
+    { "id": "protocol-artifacts", "desc": "an executable learning protocol with a reflection store and scaffold", "match": "all", "patterns": ["reflection", "scaffold"] },
+    { "id": "offload-boundary", "desc": "an explicit offload-boundary (what the learner does vs the agent)", "match": "any", "patterns": ["offload-boundary", "offload boundary", "交与不交", "verify seat"] }
+  ],
   "evals": [
     {
       "id": 1,

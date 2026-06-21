@@ -1,20 +1,12 @@
 ---
 name: ai-native-engineering
 description: >-
-  Build software the AI-Native way — actually ship working code plus the spec, the eval/verification
-  suite, the judgment-node map, and the trust-boundary/permissions declaration that make it reliable.
-  Use this whenever someone wants to "build / implement / ship a feature or service with AI agents",
-  "set up agentic coding the right way", "make my AI-generated code trustworthy / verifiable / safe",
-  "write a spec and evals for this", "give an agent permissions without it doing something
-  irreversible", "我想用 AI / agent 把这个功能做出来 / 落地", "怎么让 agent 写的代码可靠、可验证、可回滚",
-  "spec-driven development", "评测套件 / eval suite", "信任边界 / 权限只读", or asks how to wire a
-  Specify→Plan→Execute→Verify→Integrate→Learn loop for real code. Trigger even when the request sounds
-  like "just have the AI write this" — that framing is the failure mode this skill corrects: it moves
-  the work from typing code to steering it with specs, independent verifiers, and boundaries. This
-  PRODUCES a real build (code + spec + eval suite + judgment-node map + permissions declaration), not an
-  engineering-org design (that's ai-native-architect) and not a single throwaway prompt. Grounded in the
-  "AI Native 工程方法论": once code is abundant, engineering value moves to constraints, verification,
-  security, and boundaries.
+  Use when someone wants to build, implement, or ship a feature or service with AI agents and
+  wants it reliable — "build this with AI/agents", "set up agentic coding properly", "make my
+  AI-generated code trustworthy / verifiable / safe", "write a spec and evals for this", "give
+  an agent permissions without doing something irreversible", "我想用 AI/agent 把这个功能做出来/落地",
+  "怎么让 agent 写的代码可靠、可验证、可回滚", "信任边界 / 权限". Trigger even on "just have the AI
+  write this" — the failure mode this corrects.
 ---
 
 # AI-Native Engineering

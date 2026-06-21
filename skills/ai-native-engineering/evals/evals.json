@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-engineering",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For engineering cases, the output must deliver concrete implementation or engineering artifacts, independent verification, explicit permission/judgment boundaries for irreversible actions, a learn write-back, and must read as engineering execution rather than org architecture.",
+  "mechanical_checks": [
+    { "id": "named-artifacts", "desc": "the named engineering artifacts (spec, judgment-node map, permissions) are delivered as files", "match": "all", "patterns": ["SPEC", "JUDGMENT", "PERMISSIONS"] },
+    { "id": "verification-suite", "desc": "an independent eval/verification suite is included", "match": "any", "patterns": ["verification suite", "eval suite", "evals", "verification"] }
+  ],
   "evals": [
     {
       "id": "webhook-ingest-service",

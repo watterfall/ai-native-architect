@@ -3,6 +3,46 @@
 All notable changes to **ai-native-architect** are recorded here. The system is grounded in the
 *AI Native Organization Methodology* (organization = distribution of judgment × flow of context).
 
+## [Unreleased] — the skills, made mechanical
+
+Applies the same skill-creator principle the kernel scripts use — *bundle the repeated check into a
+script, then hold the artifact to it* — to the **skills themselves**, against the `writing-skills`
+authoring bar.
+
+### Added
+
+- **`references/_core/scripts/validate_skills.py`** — a meta-gate over the seven `SKILL.md` interfaces.
+  ERROR (publish floor): frontmatter over the 1024-char spec cap, or a `description` that doesn't open
+  with "Use when". WARN: body word budget, version drift across manifests, orphaned / unreachable
+  references. `--self-test` included; documented in `references/_core/scripts/README.md`.
+- **`references/_core/scripts/check_eval_output.py`** — a thin checker that verifies the *mechanical* half
+  of each skill's eval contract against a supplied output, leaving the subjective 5-lens gate to
+  `council.py`. `--self-test` included.
+- **`mechanical_checks` in all seven `evals/evals.json`** — 2 deterministic, grep-able assertions per skill
+  drawn from its output contract (named work product, required artifacts, stop-line). Verified: 14/14 pass
+  on real deliverables, 6/6 correctly fail on the wrong skill's output (they discriminate).
+
+### Changed
+
+- **All seven `description` fields rewritten to "Use when …" trigger-only form** (was: leading with what
+  the skill *does*, the SDO anti-pattern that makes agents follow the summary instead of reading the
+  skill body). Frontmatter brought back under the 1024-char spec cap and each description under the
+  500-char target, while preserving the bilingual (EN + 中文) trigger phrases. Verified: gate exits 0;
+  a 3-rep fresh-context routing micro-test routed 42/42 tasks (including edge framings) to the correct
+  skill.
+- **`validate_skills.py` `W_ORPHAN_REFS` corrected** — a reference counts as surfaced if its filename
+  appears as a whole token anywhere in the SKILL.md (the skills' inline-code "references on demand"
+  style), not only as a markdown link; whole-token match so `canon.md` ⊄ `mycanon.md`; regression locked
+  into `--self-test`.
+- **`ai-native-kernel.md` realigned to the canon** — removed the "print an X/5 essence scorecard"
+  instruction (which `_core/kernel.md` and `essence_lint.py` forbid as an attestation tell); it now
+  argues in prose, and its header marks it the architect-surface reading of `_core/kernel.md`.
+- **Canon vocabulary normalized** — `止步线` standardized to `stop-line` (a one-time gloss kept) across
+  the execution skills; the `M.01`–`M.06` worldview IDs made load-bearing in design/research/innovation;
+  a worth-knowing ↔ worth-betting `direction` disambiguation added between research and innovation.
+- **Version** — the stale current-version claim in `docs/SYSTEM-DESIGN.md` bumped 2.0.0 → 2.1.0
+  (`plugin.json` is write-guarded; its bump is left to the maintainer).
+
 ## [2.1.0] — the kernel made mechanical
 
 Applies the skill-creator principle *"bundle the repeated workflow into a script, then tell the skill to
