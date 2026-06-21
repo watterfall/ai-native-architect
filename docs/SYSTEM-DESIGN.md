@@ -186,7 +186,7 @@ fixes) is done by agents.
 ## 5. The fidelity contract (keeping the skill layer true to the canon)
 
 The canon carries a revision (e.g., REV 2026-06, SPEC.V). The skill layer carries a semantic version
-(`2.0.0`). When the canon revises:
+(`2.1.0`). When the canon revises:
 
 - Re-sync the shared `references/_core/*` files (and any skill-local `references/`) against the changed
   sheets; bump the layer's version. Because the kernel is written once in `_core`, a kernel-level canon

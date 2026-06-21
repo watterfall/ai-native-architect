@@ -5,6 +5,10 @@ flow of context) is the *theorem*; this file is *why it is the future*, and the 
 separates a future-leading AI-Native architecture from competent AI-enablement-plus. A design can pass
 every mechanical check and still miss the kernel — read this and make the kernel the spine of the work.
 
+This is the **architect-surface reading** of the shared kernel (`../../references/_core/kernel.md`) — the same
+one inversion, voiced for organization design. The shared `_core` file is canonical; where the two would ever
+differ, defer to it.
+
 ## The one inversion everything rests on
 Pre-AI, **execution was scarce** (you needed people to do the work) and judgment was comparatively
 abundant (every worker judged a little). AI **inverts the scarcity**: execution becomes abundant —
@@ -40,7 +44,8 @@ for that world now is the future-leading move, and it is what this skill is for.
 
 ## The essence test (the kernel, made operational)
 The redraw-vs-graft test is binary; the essence test is graded and sharper. A design is AI-Native *to
-the degree* it embodies these five properties. Score each design 0–5 (the **kernel/essence score**):
+the degree* it embodies these five properties. Verify each one internally — but **argue the result in prose;
+never print an "X/5" essence scorecard** (the canon and `essence_lint.py` forbid it as an attestation tell):
 
 1. **Judgment is scarce and concentrated** — humans appear only at the few irreducible judgment nodes;
    everything else defaults to agents. *(Diffuse judgment = you replicated the old org.)*
@@ -54,8 +59,9 @@ the degree* it embodies these five properties. Score each design 0–5 (the **ke
    ceases to exist in that shape. *(This is redraw-vs-graft, sharpened: agents are the default worker.)*
 
 A design that nails gating and mechanics but embodies only 2–3 of these is competent
-AI-enablement-plus, **not** a future-leading architecture — name the gap and push it further. State the
-kernel/essence score (X/5) in the deliverable, with one line of evidence per property.
+AI-enablement-plus, **not** a future-leading architecture — name the gap and push it further. In the
+deliverable, make the case in prose: one line of evidence per property that the design embodies it (or a
+named gap) — argued, not scored.
 
 ## The kernel respects its limits — essence is not maximalism
 Judgment-scarcity does **not** mean "automate everything." It means concentrate judgment where it is

@@ -28,7 +28,7 @@ WARN (surface, don't block — the later-run targets; --strict promotes to ERROR
   W_DESC_WORKFLOW_LEAK description summarises a workflow (contains -> / arrow chains)
   W_BODY_LONG          SKILL.md body > 500 words (token budget)
   W_VERSION_DRIFT      plugin.json / marketplace.json / CHANGELOG versions disagree
-  W_ORPHAN_REFS        references/*.md exist but SKILL.md links to none of them
+  W_ORPHAN_REFS        a references/*.md file is never mentioned in SKILL.md by any means
   W_DEAD_REF           a relative markdown link in SKILL.md does not resolve
 
 USAGE   python3 validate_skills.py [SKILL.md ...]   # default: all skills/*/SKILL.md
@@ -98,6 +98,13 @@ def extract_field(fm_body, key):
     return None
 
 
+def _ref_surfaced(name, body):
+    """True if `name` (a reference filename) is mentioned in the body as a whole
+    path-segment / token — a markdown link, an inline-code path, or a list entry —
+    not merely as a substring of a *different* filename (`canon.md` ⊄ `mycanon.md`)."""
+    return re.search(r"(?<![\w.\-])" + re.escape(name) + r"(?![\w])", body) is not None
+
+
 def check_refs(body, skill_dir):
     findings = []
     rel = [l for l in MD_LINK_RE.findall(body)
@@ -105,10 +112,14 @@ def check_refs(body, skill_dir):
     refs_dir = os.path.join(skill_dir, "references")
     ref_files = ([f for f in os.listdir(refs_dir) if f.endswith(".md")]
                  if os.path.isdir(refs_dir) else [])
-    if ref_files and not any("references/" in l for l in rel):
+    # A reference is "surfaced" if its filename appears as a whole token anywhere in
+    # the body — a markdown link, an inline-code path (`../../references/_core/x.md`),
+    # or a "references on demand" list. Only a file mentioned by NO means is orphaned.
+    orphaned = [f for f in ref_files if not _ref_surfaced(f, body)]
+    if orphaned:
         findings.append(Finding("WARN", "W_ORPHAN_REFS",
-            "reference file(s) exist but SKILL.md links to none — orphaned refs.",
-            f"{len(ref_files)} file(s): " + ", ".join(sorted(ref_files))))
+            "reference file(s) never mentioned in SKILL.md by any means — likely orphaned.",
+            f"{len(orphaned)} of {len(ref_files)}: " + ", ".join(sorted(orphaned))))
     for l in rel:
         target = l.split("#", 1)[0]
         if not target:
@@ -240,6 +251,9 @@ def self_test():
         ("W_DESC_WORKFLOW_LEAK", _has(check_skill_text(LEAK), "W_DESC_WORKFLOW_LEAK")),
         ("block-scalar Use-when accepted",
          not _has(check_skill_text(BLOCK), "E_DESC_NOT_USE_WHEN")),
+        ("ref surfaced via inline-code path", _ref_surfaced("taste.md", "see `references/taste.md`")),
+        ("ref surfaced via _core path", _ref_surfaced("kernel.md", "read ../../references/_core/kernel.md")),
+        ("substring filename is not a false match", not _ref_surfaced("canon.md", "only `mycanon.md` here")),
     ]
     ok = True
     for label, passed in cases:

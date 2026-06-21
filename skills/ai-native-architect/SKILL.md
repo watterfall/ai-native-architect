@@ -420,7 +420,7 @@ thing inline.
   `council.py` (the review-gate scaffold + PASS/FAIL aggregation), `essence_lint.py` (sweep the
   finished blueprint for banned framing / attestation tells). See `scripts/README.md`.
 - `references/ai-native-kernel.md` — **the kernel/essence: why AI-Native is the future organizational
-  form** (the scarcity inversion, the four shifts, the 0–5 essence test, build-to-ride-the-curves).
+  form** (the scarcity inversion, the four shifts, the five-property essence test, build-to-ride-the-curves).
   **Read second, right after T1 — make it the spine of every design.**
 - `references/methodology-canon.md` — T1, the six worldviews, the seven pillars, the three forces,
   the four-layer substrate, exact vocabulary. **Read before designing.**
