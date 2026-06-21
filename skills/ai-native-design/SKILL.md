@@ -137,7 +137,7 @@ are in `references/five-instruments.md`. Use them; don't reinvent them per proje
 
 ## The irreducible human node + the stop-line
 
-**Judgment node: TASTE — choosing among the abundant drafts, and holding the human in them.**
+**Judgment node: TASTE — choosing among the abundant drafts, and holding the human in them (M.05).**
 Per `../../references/_core/judgment-execution.md`, this node must be a real gate with teeth, not
 a label:
 
@@ -150,7 +150,7 @@ a label:
   not on catching mechanical defects. A taste gate that just rubber-stamps the first
   good-looking comp is theater.
 
-> **止步线 — never offload taste.** Generating drafts is abundant; *judging* them is the scarce
+> **stop-line (止步线) — never offload taste.** Generating drafts is abundant; *judging* them is the scarce
 > act, and it is the entire value of the craft now that making is cheap. Do not hand the final
 > "which one, and why" to the model — that is exactly the work that was always yours. (And
 > beware its quiet cousin: *treating taste as fully computable*. Soft criteria — "for whom," "has

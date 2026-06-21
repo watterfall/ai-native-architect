@@ -106,6 +106,9 @@ Is direction genuinely OPEN, and is the cost of a single failure bearable?
 **Two gates in series:** *direction open* ∧ *failure cost affordable*. Both must pass before
 the compass comes out. (Design judges *good / for-people* — taste; innovation judges *worth it
 / connected to a real need* — value-perception. Neither belongs in a settled-execution scene.)
+Innovation owns the *worth-betting* direction call (which direction to back as an affordable-loss
+bet); the *worth-knowing* direction call (is a question/finding worth pursuing as research) belongs
+to `ai-native-research`.
 
 ---
 
@@ -194,7 +197,7 @@ responsibility reading to each survivor.
 load-bearing:
 
 > **Never offload value-perception — which signal is real, and what to back.** Generating
-> candidates is abundant and belongs to agents. The **bet is judgment** and stays human. Never
+> candidates is abundant and belongs to agents. The **bet is judgment** and stays human (M.05). Never
 > offload the conviction (it must be *yours*, not borrowed) and never offload the
 > consequence-attribution (who pays). Prediction got cheap; judgment did not.
 

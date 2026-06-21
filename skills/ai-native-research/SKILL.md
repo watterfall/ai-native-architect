@@ -100,7 +100,7 @@ This is the four-step kernel loop (`judgment-execution.md` §the loop) specializ
 
 ### Step 1 — Frame: stand up the evidence base *before* generating (③ context as infrastructure, first)
 The most common way to misuse a knowledge graph is as a **warehouse** — generate first, file later. That
-reverses the load-bearing order. In AI-native research the **traceable evidence base is the spec**: it
+reverses the load-bearing order. In AI-native research the **traceable evidence base is the spec** (M.03): it
 must exist *before* generation and *constrain* it. Write down, up front, **what counts as credible
 evidence, what counts as a conflict, and what must trace to raw data.** Then generation has a target to
 align to, and the base becomes a live guardrail — unsourced claims get blocked at the door, conflicts get
@@ -144,6 +144,9 @@ agent feeds candidate material to hand. Then the human renders the two reserved 
 - **The worth-knowing call** — which finding is worth knowing/pursuing, and for whom under which value
   frame. This is constitutive, not a capability ("worth" has no frame-independent right answer; AI learns
   the *community mean* of taste, never the off-mean frontier value). See `references/worth-knowing.md`.
+  This is the *worth-knowing* direction call (is this question/finding worth pursuing as research); the
+  *worth-betting* direction call (which direction to back as an affordable-loss bet) belongs to
+  `ai-native-innovation`.
 
 Both are real gates with teeth: each carries a full disposition set — **{vouch / vouch-with-caveats /
 withhold}** — and a non-vouch verdict terminates in a *named* place (a caveated-finding section, a

@@ -17,6 +17,7 @@ hand the abundant mechanical work to a tool, keep the scarce judgment.
 | `council.py` | the **5-role review gate** — role-prompt scaffold + the PASS/FAIL aggregation (`mean ≥ 8.5 AND no dim < 8.0`) with the binding fixes named | all seven skills, and the gate on the skills themselves (`council.md`) |
 | `essence_lint.py` | the **banned house-style sweep** — means/ends sloganeering, six-surfaces-as-pipeline, printed `X/5` essence scorecards, attestation tells, placeholder algebra | any deliverable's self-check (`kernel.md`, `judgment-execution.md`) |
 | `validate_skills.py` | the **skill-quality gate** — frontmatter ≤ 1024 chars, `description` opens with "Use when" and names only triggers (no workflow leak), plus token-budget / version-drift / reachable-ref warnings | the skills *themselves* — the `writing-skills` bar, made mechanical (a meta-gate, not a kernel workflow) |
+| `check_eval_output.py` | the **eval output contract** — verifies each skill's declared `mechanical_checks` (named work product, required artifacts, stop-line surfaced) against a real output; the subjective 5-lens gate stays with `council.py` | the skills' `evals/evals.json` — the structural half of the pass criterion |
 
 Every script self-verifies — run it with no further setup:
 
@@ -25,6 +26,7 @@ python3 validate_workflow_graph.py --self-test
 python3 council.py --self-test
 python3 essence_lint.py --self-test
 python3 validate_skills.py --self-test
+python3 check_eval_output.py --self-test
 ```
 
 ## `validate_workflow_graph.py`
@@ -96,3 +98,23 @@ discovery interface; a workflow summary there becomes a shortcut agents take *in
 reading the skill body). `WARN` surfaces the softer targets — body word budget, version
 drift across the manifests, orphaned / unreachable references. Exit 0 = no errors. The
 substantive "are these the *right* triggers" call stays human / micro-test.
+
+## `check_eval_output.py`
+
+Each `evals/evals.json` carries, beside the prose `pass_criterion`, a `mechanical_checks`
+block — the structural invariants a skill's output must hold on every run (the named work
+product, the required artifacts, the stop-line surfaced). Those are grep-decidable; this
+verifies them against a supplied output file, so the deterministic floor is machine-checked
+and `council.py` spends its scarce judgment only on the subjective lenses.
+
+```bash
+# verify a skill output against its eval contract's mechanical_checks
+python3 references/_core/scripts/check_eval_output.py skills/ai-native-research/evals/evals.json --output finding.md
+# dry run — list the checks a skill declares
+python3 references/_core/scripts/check_eval_output.py skills/ai-native-research/evals/evals.json
+```
+
+A check is `{id, desc, match, patterns}` with `match` = `all` / `any` / `regex`. It does NOT
+execute the skill and does NOT replace the council — it gates the mechanical half only; a
+passing run can still fail the council, a failing run has a concrete named defect. Exit 0 =
+all checks pass.

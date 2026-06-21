@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-architect",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For architect cases, the blueprint must classify the track or gate-out honestly, redraw judgment distribution and context flow, include workflow/substrate/economics, and reject enablement grafts that are not AI-Native architecture.",
+  "mechanical_checks": [
+    { "id": "workflow-graph-dual-notation", "desc": "at least one workflow graph in both YAML and Mermaid", "match": "all", "patterns": ["yaml", "mermaid"] },
+    { "id": "redraw-vs-graft-verdict", "desc": "the redraw-vs-graft self-test is reported with an explicit yes/no verdict", "match": "regex", "patterns": ["redraw[- ]vs[- ]graft[\\s\\S]{0,120}\\b(yes|no)\\b"] }
+  ],
   "evals": [
     {
       "id": 1,

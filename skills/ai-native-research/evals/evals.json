@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-research",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For research cases, the output must produce a Research Finding Dossier, keep claims separate from evidence, preserve the human credibility or worth-knowing verdict, and write the ledger/graph/blind-spot context back for future retrieval.",
+  "mechanical_checks": [
+    { "id": "credibility-ledger", "desc": "a credibility ledger (claims graded, kept separate from evidence) is present", "match": "any", "patterns": ["credibility ledger", "credibility verdict"] },
+    { "id": "blind-spot-register", "desc": "a blind-spot register is present", "match": "any", "patterns": ["blind-spot register", "blind spot register", "blind-spot"] }
+  ],
   "evals": [
     {
       "id": 1,

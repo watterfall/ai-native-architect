@@ -92,9 +92,12 @@ the shared spine, and both tiers reference it:
 - **`council.md`** — the 5-role adversarial review gate used as the pre-release quality bar.
 - **`scripts/`** (added v2.1.0) — the deterministic half of the kernel, made executable (stdlib Python,
   no install): `validate_workflow_graph.py` (the graph-executability contract, checked), `council.py`
-  (the review-gate scaffold + PASS/FAIL aggregation), `essence_lint.py` (the banned-house-style sweep).
-  The spine *says* what must hold; these *check* the deterministic part of it, so the prose contract and
-  the artifact cannot drift. They mechanize the checks, not the judgment.
+  (the review-gate scaffold + PASS/FAIL aggregation), `essence_lint.py` (the banned-house-style sweep) —
+  plus two meta-tools that point at the skills themselves: `validate_skills.py` (gates the seven `SKILL.md`
+  interfaces against the `writing-skills` authoring bar) and `check_eval_output.py` (verifies the mechanical
+  half of each skill's eval contract — the `mechanical_checks` in `evals/evals.json`). The spine *says* what
+  must hold; these *check* the deterministic part of it, so the prose contract and the artifact cannot drift.
+  They mechanize the checks, not the judgment.
 
 **Architecture / judgment tier — `ai-native-architect`** (one skill). It *designs* an AI-Native
 organization: a **scope gate** (Track A greenfield / Track B carve-out / out-of-scope AI-enablement /
@@ -108,6 +111,15 @@ organization. This tier decides *how the work should be distributed* — it does
 its surface the AI-native way: it stays at the execution layer (produces the real work product, does not
 drift back into re-designing the org), hands the abundant work to agents, and holds the few irreducible
 judgment nodes for a human.
+
+**The canonical execution-skill spine.** All six share the same section order, so a reader — or an agent —
+lands the same way on any surface: **① a gate** (redraw-vs-graft / scope) · **② the named work product** ·
+**③ the operating loop** (the four-step kernel, specialized to the surface) · **④ the stop-line** — the
+judgment node never offloaded · **⑤ a self-check** before delivering · **⑥ references, read on demand.** A
+surface may *add* its own sections (innovation's habitat, org's observability) but never drops a spine slot;
+the architect tier shares the spine but front-loads its scope gate and conditional depth modules. This
+contract is the consistency target for any future skill, and the existing seven already satisfy it — so it
+is documented here rather than enforced by a body rewrite.
 
 | Skill | Does the work of… | Work product (an *instance*, not a design doc) |
 |---|---|---|

@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-org",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For operating cases, the runbook must orchestrate the fleet as the default worker, route every exception class to a NAMED human node with a wait-set and a full verdict set, with each non-approve verdict ending in a named step, install a context-upkeep practice that defends against rot (write-back-as-done + the context-debt test), stand observability up as the nervous system, and hold the org stop-line: no agent at the center of a trust, safety, or relationship node. It must read as an OPERATING runbook, not an org design, and must not silently redraw the architecture's judgment nodes.",
+  "mechanical_checks": [
+    { "id": "operating-runbook", "desc": "an Operating Runbook artifact (not an org design)", "match": "any", "patterns": ["operating runbook", "runbook"] },
+    { "id": "named-exception-routing", "desc": "exceptions route to a named human node via a review queue / escalation", "match": "all", "patterns": ["queue", "escalat"] }
+  ],
   "evals": [
     {
       "id": 1,

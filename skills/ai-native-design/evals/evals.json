@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-design",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For design cases, the design-specific lenses are kernel fidelity, design-domain craft, skeptic/collapse-to-enablement, operability, and human boundary. The deliverable must be a real design artifact bundle (artifact + tokens-as-code + taste rationale + 指纹 check), produced via the spread->converge loop, with taste held by a human and judgment fed back into the system.",
+  "mechanical_checks": [
+    { "id": "code-shaped-artifact-plus-tokens", "desc": "the artifact ships in code-shaped form (CSS/HTML/JSX) plus design tokens", "match": "all", "patterns": ["css", "token"] },
+    { "id": "fingerprint-check", "desc": "an anti-homogenization fingerprint (指纹) check is present", "match": "any", "patterns": ["fingerprint", "指纹"] }
+  ],
   "evals": [
     {
       "id": 1,

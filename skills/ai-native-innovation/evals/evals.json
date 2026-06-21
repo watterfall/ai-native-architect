@@ -1,6 +1,10 @@
 {
   "skill_name": "ai-native-innovation",
   "pass_criterion": "A strict 5-lens council review scores the skill output at mean >= 8.5/10 with no lens below 8.0, and the output produces the named work product, holds the human stop-line, covers adverse/negative paths, and writes context back into a retrievable artifact. For innovation cases, the output must run recognition and falsification before polish, make the value-perception or bet decision the human stop-line, produce an Innovation Portfolio or Bet Sheet, and feed bet retrospectives back into the system without drifting into org architecture.",
+  "mechanical_checks": [
+    { "id": "portfolio-or-bet-sheet", "desc": "an Innovation Portfolio / Bet Sheet is produced", "match": "any", "patterns": ["portfolio", "bet sheet", "bet allocation"] },
+    { "id": "falsification-log", "desc": "a falsification log precedes the bets", "match": "any", "patterns": ["falsification", "falsify"] }
+  ],
   "evals": [
     {
       "id": "drowning-in-ai-ideas",
